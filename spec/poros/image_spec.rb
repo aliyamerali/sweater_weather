@@ -8,7 +8,7 @@ RSpec.describe 'Forecast PORO' do
 
   it 'has only the requested readable attributes' do
     expect(@image.image_url.split('?').first).to eq("https://images.unsplash.com/photo-1619109663062-c011afb8fb13")
-    expect(@image.image_url.split('?').last).to eq('utm_source=sweater_weather&utm_medium=referral')
+    expect(@image.image_url.split('&').last).to eq('utm_source=sweater_weather&utm_medium=referral')
     expect(@image.location).to eq('denver')
     expect(@image.source).to eq('Unsplash')
     expect(@image.author).to eq('Andrew Coop')

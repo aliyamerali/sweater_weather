@@ -4,7 +4,9 @@ class Api::V1::BackgroundController < ApplicationController
     weather_condition = ForecastFacade.get_forecast(location).current_weather[:conditions]
     time_of_day = time_of_day(Time.now.hour)
     images = ImageService.search(location+' '+weather_condition+' '+time_of_day)
-    # binding.pry
+    image = images[:results].sample
+    image_object = Image.new(image, location)
+    binding.pry
   end
 
   private

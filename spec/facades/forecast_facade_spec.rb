@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Forecast Facade' do
   it '.get_forecast takes in a city and state and returns forecast' do
+    location = ("denver,co")
     forecast = ForecastFacade.get_forecast(location)
 
     expect(forecast.current_weather.keys.include?(:datetime)).to eq(true)

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Weather endpoint returns forecast for a given city' do
-  it 'takes in a city and state and returns forecast' do
+  xit 'takes in a city and state and returns forecast' do
     get '/api/v1/forecast?location=denver,co'
 
     output = JSON.parse(response.body, symbolize_names: true)[:data]

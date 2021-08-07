@@ -7,8 +7,14 @@ RSpec.describe 'Weather service' do
       it 'takes in a lat_long and returns weather data' do
         lat = 39.738453
         long = -104.984853
-        response = WeatherService.forecast(lat, long)
+        # when webmock is setup:
+        # exclude = "minutely,alerts"
+        # response_body = File.read('spec/fixtures/weather_successful.json')
+        # stub_request(:get,"https://api.openweathermap.org/data/2.5/onecall?lat=#{lat}&lon=#{long}&exclude=#{exclude}&appid=#{ENV['WEATHER_API_KEY']}").
+        #     to_return(status: 200, body: response_body, headers: {})
 
+        response = WeatherService.forecast(lat, long)
+        
         expect(response).to have_key(:current)
         expect(response).to have_key(:daily)
         expect(response).to have_key(:hourly)

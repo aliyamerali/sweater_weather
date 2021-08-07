@@ -9,9 +9,9 @@ class Forecast
 
   def get_current_weather(data)
     {
-      datetime: data[:dt], #CONVERT TO READABLE DATETIME
-      sunrise: data[:sunrise], #CONVERT TO READABLE 1628337889
-      sunset: data[:sunset], #CONVERT TO READABLE 1628388393
+      datetime: Time.at(data[:dt]),
+      sunrise: Time.at(data[:sunrise]),
+      sunset: Time.at(data[:sunset]), 
       sunset: data[:sunset],
       temperature: data[:temp],
       feels_like: data[:feels_like],
@@ -25,9 +25,9 @@ class Forecast
   end
 
   def get_hourly_weather(hourly_data)
-    hourly_data.take(8).map do |hour_data|
+    hourly_data.drop(1).take(8).map do |hour_data|
       {
-        time: hour_data[:dt], #CONVERT TO READABLE TIME ONLY
+        time: Time.at(hour_data[:dt]).strftime("%I:%M:%S"),
         temperature: hour_data[:temp],
         conditions: hour_data[:weather].first[:description],
         icon: hour_data[:weather].first[:icon]
@@ -36,11 +36,11 @@ class Forecast
   end
 
   def get_daily_weather(daily_data)
-    daily_data.take(5).map do |day_data|
+    daily_data.drop(1).take(5).map do |day_data|
       {
-        date: day_data[:dt], #CONVERT TO READABLE DATE ONLY
-        sunrise: day_data[:sunrise], #CONVERT TO READABLE 1628352000
-        sunset: day_data[:sunset], #CONVERT TO READABLE 1628352000
+        date: Time.at(day_data[:dt]).strftime("%Y-%m-%d"),
+        sunrise: Time.at(day_data[:sunrise]),
+        sunset: Time.at(day_data[:sunset]),
         max_temp: day_data[:temp][:max],
         min_temp: day_data[:temp][:min],
         conditions: day_data[:weather].first[:description],

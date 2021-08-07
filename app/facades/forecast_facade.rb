@@ -4,6 +4,6 @@ class ForecastFacade
     lat = lat_long[:lat]
     long = lat_long[:lng]
     weather = WeatherService.forecast(lat, long)
-    forecast = Forecast.new(weather)
+    Forecast.new(weather)
   end
 end

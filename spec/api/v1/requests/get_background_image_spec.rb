@@ -2,7 +2,20 @@ require 'rails_helper'
 
 RSpec.describe "Get background image for weather page" do
   before :each do
-    query = 'denver,co clear sky afternoon'
+    @location = "denver"
+    lat_long_response = File.read('spec/fixtures/lat_long_successful.json')
+    stub_request(:get,"http://www.mapquestapi.com/geocoding/v1/address?key=#{ENV['GEOCODE_API_KEY']}&location=#{@location}").
+        to_return(status: 200, body: lat_long_response, headers: {})
+
+    lat = 39.738453
+    long = -104.984853
+    units="imperial"
+    exclude = "minutely,alerts"
+    weather_response = File.read('spec/fixtures/weather_successful.json')
+    stub_request(:get, "https://api.openweathermap.org/data/2.5/onecall?appid=#{ENV['WEATHER_API_KEY']}&exclude=#{exclude}&lat=#{lat}&lon=#{long}&units=#{units}")
+      .to_return(status: 200, body: weather_response, headers: {})
+
+    query = 'denver broken clouds afternoon'
     image_search_success = File.read('spec/fixtures/image_search_success.json')
     stub_request(:get, "https://api.unsplash.com/search/photos?query=#{query}&client_id=#{ENV['UNSPLASH_API_KEY']}").
         to_return(status: 200, body: image_search_success, headers: {})

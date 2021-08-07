@@ -11,8 +11,7 @@ class Forecast
     {
       datetime: Time.at(data[:dt]),
       sunrise: Time.at(data[:sunrise]),
-      sunset: Time.at(data[:sunset]), 
-      sunset: data[:sunset],
+      sunset: Time.at(data[:sunset]),
       temperature: data[:temp],
       feels_like: data[:feels_like],
       humidity: data[:humidity],

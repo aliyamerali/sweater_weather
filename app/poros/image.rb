@@ -6,7 +6,7 @@ class Image
     @location = location
     @source = "Unsplash"
     @author = data[:user][:name]
-    @author_profile = url_append(data[:links][:self])
+    @author_profile = url_append(data[:user][:links][:html])
   end
 
   def url_append(url)

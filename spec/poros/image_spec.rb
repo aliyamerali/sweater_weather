@@ -13,7 +13,7 @@ RSpec.describe 'Forecast PORO' do
     expect(@image.location).to eq('denver')
     expect(@image.source).to eq('Unsplash')
     expect(@image.author).to eq('Andrew Coop')
-    expect(@image.author_profile.split('?').first).to eq("https://api.unsplash.com/photos/2spjXRLxPUQ")
+    expect(@image.author_profile.split('?').first).to eq("https://unsplash.com/@andrewcoop")
     expect(@image.author_profile.split('?').last).to eq('utm_source=sweater_weather&utm_medium=referral')
   end
 end

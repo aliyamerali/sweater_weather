@@ -47,6 +47,7 @@ group :test do
   gem 'shoulda-matchers'
   gem 'launchy'
   gem 'simplecov'
+  gem 'webmock'
 end
 
 

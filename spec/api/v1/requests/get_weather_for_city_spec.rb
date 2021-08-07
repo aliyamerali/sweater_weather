@@ -1,8 +1,23 @@
 require 'rails_helper'
 
 RSpec.describe 'Weather endpoint returns forecast for a given city' do
+  before :each do
+    @location = "denver,co"
+    lat_long_response = File.read('spec/fixtures/lat_long_successful.json')
+    stub_request(:get,"http://www.mapquestapi.com/geocoding/v1/address?key=#{ENV['GEOCODE_API_KEY']}&location=#{@location}").
+        to_return(status: 200, body: lat_long_response, headers: {})
+
+    lat = 39.738453
+    long = -104.984853
+    units="imperial"
+    exclude = "minutely,alerts"
+    weather_response = File.read('spec/fixtures/weather_successful.json')
+    stub_request(:get, "https://api.openweathermap.org/data/2.5/onecall?appid=#{ENV['WEATHER_API_KEY']}&exclude=#{exclude}&lat=#{lat}&lon=#{long}&units=#{units}")
+      .to_return(status: 200, body: weather_response, headers: {})
+  end
+
   it 'takes in a city and state and returns forecast' do
-    get '/api/v1/forecast?location=denver,co'
+    get "/api/v1/forecast?location=#{@location}"
 
     output = JSON.parse(response.body, symbolize_names: true)[:data]
 

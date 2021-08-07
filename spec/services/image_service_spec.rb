@@ -6,10 +6,10 @@ RSpec.describe 'Image API calls' do
       it 'returns 10 image options based on search keywords' do
         query = 'denver,co clear sky afternoon'
         image_search_success = File.read('spec/fixtures/image_search_success.json')
-        stub_request(:get, "https://api.unsplash.com/search/photos?query=#{query}&client_id=#{ENV['UNSPLASH_API_KEY']}").
-            to_return(status: 200, body: image_search_success, headers: {})
+        stub_request(:get, "https://api.unsplash.com/search/photos?client_id=#{ENV['UNSPLASH_API_KEY']}&query=denver,co%20clear%20sky%20afternoon")
+          .to_return(status: 200, body: image_search_success, headers: {})
 
-        response = ImageService.search("denver,co clear sky afternoon")
+        response = ImageService.search(query)
 
         expect(response[:results].length).to eq(10)
         expect(response[:results].first[:urls]).to have_key(:regular)
@@ -20,6 +20,17 @@ RSpec.describe 'Image API calls' do
         # the Unsplash photographer, and contain a link back to their Unsplash profile.
         # All links back to Unsplash should use utm parameters in the
         # ?utm_source=your_app_name&utm_medium=referral
+      end
+
+      it 'returns empty response if no search entered' do
+        query = ''
+        image_search_fail = File.read('spec/fixtures/image_search_fail.json')
+        stub_request(:get, "https://api.unsplash.com/search/photos?client_id=#{ENV['UNSPLASH_API_KEY']}&query=#{query}")
+          .to_return(status: 200, body: image_search_fail, headers: {})
+
+        response = ImageService.search(query)
+
+        expect(response[:results].length).to eq(0)
       end
     end
   end

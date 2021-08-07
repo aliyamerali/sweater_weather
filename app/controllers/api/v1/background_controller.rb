@@ -6,7 +6,7 @@ class Api::V1::BackgroundController < ApplicationController
     images = ImageService.search(location+' '+weather_condition+' '+time_of_day)
     image = images[:results].sample
     image_object = Image.new(image, location)
-    binding.pry
+    render json: ImageSerializer.new(image_object)
   end
 
   private

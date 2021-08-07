@@ -1,4 +1,5 @@
 class Image
+  attr_reader :image_url, :location, :source, :author, :author_profile
 
   def initialize(data, location)
     @image_url = url_append(data[:urls][:regular])

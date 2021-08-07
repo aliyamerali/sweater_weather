@@ -25,12 +25,13 @@ RSpec.describe "Get background image for weather page" do
     get '/api/v1/backgrounds?location=denver'
 
     output = JSON.parse(response.body, symbolize_names: true)
-    binding.pry
+
     expect(response).to be_successful
-    expect(output[:data][:type]).to eq("Image")
+    expect(output[:data][:type]).to eq("image")
     expect(output[:data][:id]).to eq(nil)
     expect(output[:data][:attributes]).to have_key(:image_url)
-    expect(output[:data][:attributes][:image_url].split('?').last).to eq('utm_source=sweater_weather&utm_medium=referral')
+    expect(output[:data][:attributes][:image_url].split('&')[-2]).to eq('utm_source=sweater_weather')
+    expect(output[:data][:attributes][:image_url].split('&')[-1]).to eq('utm_medium=referral')
     expect(output[:data][:attributes]).to have_key(:location)
     expect(output[:data][:attributes]).to have_key(:source)
     expect(output[:data][:attributes]).to have_key(:author)

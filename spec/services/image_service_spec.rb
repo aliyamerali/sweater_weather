@@ -15,11 +15,6 @@ RSpec.describe 'Image API calls' do
         expect(response[:results].first[:urls]).to have_key(:regular)
         expect(response[:results].first[:user]).to have_key(:username)
         expect(response[:results].first[:user][:links]).to have_key(:self)
-
-        # When displaying a photo from Unsplash, your application must attribute Unsplash,
-        # the Unsplash photographer, and contain a link back to their Unsplash profile.
-        # All links back to Unsplash should use utm parameters in the
-        # ?utm_source=your_app_name&utm_medium=referral
       end
 
       it 'returns empty response if no search entered' do

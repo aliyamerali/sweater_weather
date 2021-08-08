@@ -32,6 +32,11 @@ RSpec.describe 'User registration and login' do
       expect(body[:data][:attributes][:api_key]).to be_a(String)
     end
 
+    xit 'will not return an api key that is already in the DB' do
+      # how to test this? is the validation test enough? This just catches that the response
+      # won't ever get the error that the api_key is not unique
+    end
+
     it 'does not create record if password and password confirmation do not match' do
       mismatch_body = {
                         "email": @email,

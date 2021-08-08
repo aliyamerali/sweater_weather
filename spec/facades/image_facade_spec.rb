@@ -19,10 +19,14 @@ RSpec.describe 'Image facade' do
     image_search_success = File.read('spec/fixtures/image_search_success.json')
     stub_request(:get, "https://api.unsplash.com/search/photos?query=#{query}&client_id=#{ENV['UNSPLASH_API_KEY']}").
         to_return(status: 200, body: image_search_success, headers: {})
+
+    allow(Time).to receive(:now) do
+      DateTime.new(2021,8,7,15,5,6)
+    end
   end
 
   describe 'class methods' do
-    it 'returns an image link, source, author, and author link for location, time of day, weather' do
+    it '.get image returns an image link, source, author, and author link for location, time of day, weather' do
       image = ImageFacade.get_image(@location)
 
       expect(image.image_url).to be_a(String)
@@ -34,5 +38,15 @@ RSpec.describe 'Image facade' do
       expect(image.author_profile).to be_a(String)
       expect(image.author_profile.split('?').last).to eq('utm_source=sweater_weather&utm_medium=referral')
     end
+
+    it '.time_of_day returns string of time of day based on hour' do
+      expect(ImageFacade.time_of_day(1)).to eq('night')
+      expect(ImageFacade.time_of_day(10)).to eq('morning')
+      expect(ImageFacade.time_of_day(15)).to eq('afternoon')
+      expect(ImageFacade.time_of_day(21)).to eq('evening')
+      expect(ImageFacade.time_of_day(23)).to eq('night')
+    end
   end
+
+
 end

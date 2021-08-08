@@ -19,6 +19,10 @@ RSpec.describe "Get background image for weather page" do
     image_search_success = File.read('spec/fixtures/image_search_success.json')
     stub_request(:get, "https://api.unsplash.com/search/photos?query=#{query}&client_id=#{ENV['UNSPLASH_API_KEY']}").
         to_return(status: 200, body: image_search_success, headers: {})
+
+    allow(Time).to receive(:now) do
+      DateTime.new(2021,8,7,15,5,6)
+    end
   end
 
   it 'returns an image link, source, author, and author link for location, time of day, weather' do

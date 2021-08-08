@@ -2,12 +2,11 @@ class ImageFacade
   def self.get_image(location)
     weather_conditions = ForecastFacade.get_forecast(location).current_weather[:conditions]
     time_of_day = time_of_day(Time.now.hour)
-    images = ImageService.search(location+' '+weather_conditions+' '+time_of_day)
+    images = ImageService.search("#{location} #{weather_conditions} #{time_of_day}")
     image_data = images[:results].sample
     Image.new(image_data, location)
   end
 
-  private
   def self.time_of_day(hour)
     if hour <= 5
       'night'

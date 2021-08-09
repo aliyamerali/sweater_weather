@@ -18,12 +18,12 @@ RSpec.describe 'Breweries Endpoint' do
     lat_long = "#{lat},#{long}"
     @quantity_five = 5
     brewery_response = File.read('spec/fixtures/breweries_denver_5.json')
-    stub_request(:get, "https://api.openbrewerydb.org/breweries?by_dist=#{lat_long}&per_page=#{@quantity_five}")
+    stub_request(:get, "https://api.openbrewerydb.org/breweries?by_dist=#{lat_long}&per_page=#{@quantity_five}&page=1")
       .to_return(status: 200, body: brewery_response, headers: {})
 
     @quantity_two = 2
     brewery_response = File.read('spec/fixtures/breweries_denver_2.json')
-    stub_request(:get, "https://api.openbrewerydb.org/breweries?by_dist=#{lat_long}&per_page=#{@quantity_two}")
+    stub_request(:get, "https://api.openbrewerydb.org/breweries?by_dist=#{lat_long}&per_page=#{@quantity_two}&page=1")
       .to_return(status: 200, body: brewery_response, headers: {})
 
     @quantity_fifty = 50
@@ -74,7 +74,8 @@ RSpec.describe 'Breweries Endpoint' do
   end
 
   it 'makes multiple calls if the quantity requested is greater than 50' do
-    get "/api/v1/breweries?location=&quantity=53"
+    get "/api/v1/breweries?location=#{@location}&quantity=53"
+    output = JSON.parse(response.body, symbolize_names: true)
 
     expect(response).to be_successful
     expect(output[:data][:attributes][:breweries].length).to eq(53)

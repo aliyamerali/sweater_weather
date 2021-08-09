@@ -18,7 +18,7 @@ RSpec.describe 'Brewery Facade' do
     @quantity = 5
     brewery_response = File.read('spec/fixtures/breweries_denver_5.json')
     lat_long = "#{lat},#{long}"
-    stub_request(:get, "https://api.openbrewerydb.org/breweries?by_dist=#{lat_long}&per_page=#{@quantity}")
+    stub_request(:get, "https://api.openbrewerydb.org/breweries?by_dist=#{lat_long}&per_page=#{@quantity}&page=1")
       .to_return(status: 200, body: brewery_response, headers: {})
   end
 

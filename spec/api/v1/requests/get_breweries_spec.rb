@@ -57,4 +57,12 @@ RSpec.describe 'Breweries Endpoint' do
     expect(output[:data][:attributes][:breweries].length).to eq(@quantity_two)
   end
 
+  it 'returns an error if no location given' do
+    get "/api/v1/breweries?location=&quantity=#{@quantity_two}"
+    output = JSON.parse(response.body, symbolize_names: true)
+
+    expect(response.status).to eq(400) 
+    expect(output[:response]).to eq("Bad Request")
+  end
+
 end

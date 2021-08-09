@@ -1,10 +1,9 @@
 class BrewerySerializer
-
   def self.find_breweries(location, forecast, breweries)
     {
       data: {
         id: nil,
-        type: "breweries",
+        type: 'breweries',
         attributes: {
           destination: location,
           forecast: {
@@ -14,8 +13,7 @@ class BrewerySerializer
           breweries: breweries.map do |brewery|
             { id: brewery.id,
               name: brewery.name,
-              brewery_type: brewery.brewery_type
-            }
+              brewery_type: brewery.brewery_type }
           end
         }
       }

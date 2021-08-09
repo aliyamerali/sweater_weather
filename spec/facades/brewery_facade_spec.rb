@@ -26,7 +26,7 @@ RSpec.describe 'Brewery Facade' do
     breweries = BreweryFacade.find_breweries(@location, @quantity)
 
     expect(breweries.length).to eq(@quantity)
-    expect(breweries.first.id).to be_a(String)
+    expect(breweries.first.id).to be_a(Integer)
     expect(breweries.first.name).to be_a(String)
     expect(breweries.first.brewery_type).to be_a(String)
   end

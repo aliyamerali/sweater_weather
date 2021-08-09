@@ -20,9 +20,17 @@ RSpec.describe 'Brewery Service' do
         expect(response.first).to have_key(:brewery_type)
       end
 
-      # it 'returns an empty response and 500 stat\us if inaccurate/no lat/long given' do
-      #
-      # end
+      it 'returns an empty response if inaccurate/no lat/long given' do
+        lat_long = '39.738453,'
+        quantity = 5
+
+        stub_request(:get, "https://api.openbrewerydb.org/breweries?by_dist=#{lat_long}&per_page=#{quantity}")
+          .to_return(status: 500, body: nil, headers: {})
+
+        response = BreweryService.find_breweries(lat_long, quantity)
+
+        expect(response).to eq('Invalid Search Parameters')
+      end
     end
   end
 end

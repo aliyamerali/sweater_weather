@@ -4,8 +4,6 @@ class Api::V1::BreweriesController < ApplicationController
 
     # get forecast
     forecast = ForecastFacade.get_forecast(location)
-    summary = forecast.current_weather[:conditions]
-    temperature = forecast.current_weather[:temperature]
 
     # get data from breweries api
     quantity = params[:quantity]

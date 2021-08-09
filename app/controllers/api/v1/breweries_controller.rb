@@ -6,8 +6,7 @@ class Api::V1::BreweriesController < ApplicationController
     quantity = params[:quantity]
     lat_long_data = GeocodeService.lat_long(location)[:results].first[:locations].first[:latLng]
     lat_long = "#{lat_long_data[:lat]},#{lat_long_data[:lng]}"
-    response = Faraday.get "https://api.openbrewerydb.org/breweries?by_dist=#{lat_long}&per_page=#{quantity}"
-    breweries = JSON.parse(response.body, symbolize_names: true)
+    breweries = BreweryService.find_breweries(lat_long, quantity)
 
     # get forecast
     forecast = ForecastFacade.get_forecast(location)
@@ -15,7 +14,7 @@ class Api::V1::BreweriesController < ApplicationController
     temperature = forecast.current_weather[:temperature]
 
     # create brewery objects
-    
+
 
     # serialize response
     # send JSON response

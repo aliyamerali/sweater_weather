@@ -1,0 +1,473 @@
+{
+    "route": {
+        "hasTollRoad": false,
+        "hasBridge": true,
+        "boundingBox": {
+            "lr": {
+                "lng": -104.975235,
+                "lat": 39.733692
+            },
+            "ul": {
+                "lng": -105.236649,
+                "lat": 40.073265
+            }
+        },
+        "distance": 32.63,
+        "hasTimedRestriction": false,
+        "hasTunnel": false,
+        "hasHighway": true,
+        "computedWaypoints": [],
+        "routeError": {
+            "errorCode": -400,
+            "message": ""
+        },
+        "formattedTime": "00:39:49",
+        "sessionId": "61119ae5-0049-5f21-02b4-3359-02619fb7c60b",
+        "hasAccessRestriction": false,
+        "realTime": 2623,
+        "hasSeasonalClosure": false,
+        "hasCountryCross": false,
+        "fuelUsed": 1.52,
+        "legs": [
+            {
+                "hasTollRoad": false,
+                "hasBridge": true,
+                "destNarrative": "Proceed to 6562 LOOKOUT RD.",
+                "distance": 32.63,
+                "hasTimedRestriction": false,
+                "hasTunnel": false,
+                "hasHighway": true,
+                "index": 0,
+                "formattedTime": "00:39:49",
+                "origIndex": 3,
+                "hasAccessRestriction": false,
+                "hasSeasonalClosure": false,
+                "hasCountryCross": false,
+                "roadGradeStrategy": [
+                    []
+                ],
+                "destIndex": 7,
+                "time": 2389,
+                "hasUnpaved": false,
+                "origNarrative": "Go northwest on Park Ave.",
+                "maneuvers": [
+                    {
+                        "distance": 0.02,
+                        "streets": [
+                            "N Ogden St"
+                        ],
+                        "narrative": "Start out going south on N Ogden St toward E 11th Ave.",
+                        "turnType": 2,
+                        "startPoint": {
+                            "lng": -104.975243,
+                            "lat": 39.734001
+                        },
+                        "index": 0,
+                        "formattedTime": "00:00:05",
+                        "directionName": "South",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=39.73400115966797,-104.9752426147461|marker-1||39.733707427978516,-104.97523498535156|marker-2||&center=39.73385429382324,-104.97523880004883&defaultMarker=none&zoom=15&rand=-774536388&session=61119ae5-0049-5f21-02b4-3359-02619fb7c60b",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 5,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/icon-dirs-start_sm.gif",
+                        "direction": 4
+                    },
+                    {
+                        "distance": 0.126,
+                        "streets": [
+                            "E 11th Ave"
+                        ],
+                        "narrative": "Turn right onto E 11th Ave.",
+                        "turnType": 2,
+                        "startPoint": {
+                            "lng": -104.975235,
+                            "lat": 39.733707
+                        },
+                        "index": 1,
+                        "formattedTime": "00:00:41",
+                        "directionName": "West",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=39.733707427978516,-104.97523498535156|marker-2||39.73369216918945,-104.97759246826172|marker-3||&center=39.733699798583984,-104.97641372680664&defaultMarker=none&zoom=14&rand=-774536388&session=61119ae5-0049-5f21-02b4-3359-02619fb7c60b",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 41,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_right_sm.gif",
+                        "direction": 7
+                    },
+                    {
+                        "distance": 0.917,
+                        "streets": [
+                            "N Clarkson St"
+                        ],
+                        "narrative": "Turn right onto N Clarkson St.",
+                        "turnType": 2,
+                        "startPoint": {
+                            "lng": -104.977592,
+                            "lat": 39.733692
+                        },
+                        "index": 2,
+                        "formattedTime": "00:02:22",
+                        "directionName": "North",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=39.73369216918945,-104.97759246826172|marker-3||39.74698257446289,-104.97755432128906|marker-4||&center=39.74033737182617,-104.97757339477539&defaultMarker=none&zoom=9&rand=-774536388&session=61119ae5-0049-5f21-02b4-3359-02619fb7c60b",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 142,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_right_sm.gif",
+                        "direction": 1
+                    },
+                    {
+                        "distance": 1.74,
+                        "streets": [
+                            "Park Ave"
+                        ],
+                        "narrative": "Turn slight left onto Park Ave.",
+                        "turnType": 7,
+                        "startPoint": {
+                            "lng": -104.977554,
+                            "lat": 39.746983
+                        },
+                        "index": 3,
+                        "formattedTime": "00:04:01",
+                        "directionName": "Northwest",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=39.74698257446289,-104.97755432128906|marker-4||39.76682662963867,-104.99483489990234|marker-5||&center=39.75690460205078,-104.9861946105957&defaultMarker=none&zoom=9&rand=-774536388&session=61119ae5-0049-5f21-02b4-3359-02619fb7c60b",
+                        "transportMode": "AUTO",
+                        "attributes": 1024,
+                        "time": 241,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_slight_left_sm.gif",
+                        "direction": 2
+                    },
+                    {
+                        "distance": 3.93,
+                        "streets": [
+                            "I-25 N",
+                            "US-87 N"
+                        ],
+                        "narrative": "Merge onto I-25 N/US-87 N toward Ft Collins.",
+                        "turnType": 10,
+                        "startPoint": {
+                            "lng": -104.994835,
+                            "lat": 39.766827
+                        },
+                        "index": 4,
+                        "formattedTime": "00:04:41",
+                        "directionName": "North",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "25",
+                                "type": 1,
+                                "url": "http://icons.mqcdn.com/icons/rs1.png?n=25&d=NORTH",
+                                "direction": 1
+                            },
+                            {
+                                "extraText": "",
+                                "text": "87",
+                                "type": 2,
+                                "url": "http://icons.mqcdn.com/icons/rs2.png?n=87&d=NORTH",
+                                "direction": 1
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=39.76682662963867,-104.99483489990234|marker-5||39.82135009765625,-104.98250579833984|marker-6||&center=39.79408836364746,-104.9886703491211&defaultMarker=none&zoom=7&rand=-774536388&session=61119ae5-0049-5f21-02b4-3359-02619fb7c60b",
+                        "transportMode": "AUTO",
+                        "attributes": 1152,
+                        "time": 281,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_merge_right_sm.gif",
+                        "direction": 1
+                    },
+                    {
+                        "distance": 18.105,
+                        "streets": [
+                            "US-36 W"
+                        ],
+                        "narrative": "Merge onto US-36 W via EXIT 217A on the left toward Boulder.",
+                        "turnType": 11,
+                        "startPoint": {
+                            "lng": -104.982506,
+                            "lat": 39.82135
+                        },
+                        "index": 5,
+                        "formattedTime": "00:17:30",
+                        "directionName": "West",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "36",
+                                "type": 2,
+                                "url": "http://icons.mqcdn.com/icons/rs2.png?n=36&d=WEST",
+                                "direction": 7
+                            },
+                            {
+                                "extraText": "",
+                                "text": "217A",
+                                "type": 1001,
+                                "url": "http://icons.mqcdn.com/icons/rs1001.png?n=217A&d=LEFT",
+                                "direction": 0
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=39.82135009765625,-104.98250579833984|marker-6||39.98317337036133,-105.2271499633789|marker-7||&center=39.90226173400879,-105.10482788085938&defaultMarker=none&zoom=6&rand=-774536388&session=61119ae5-0049-5f21-02b4-3359-02619fb7c60b",
+                        "transportMode": "AUTO",
+                        "attributes": 1152,
+                        "time": 1050,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_merge_left_sm.gif",
+                        "direction": 7
+                    },
+                    {
+                        "distance": 4.935,
+                        "streets": [
+                            "Foothills Pkwy",
+                            "CO-157 N"
+                        ],
+                        "narrative": "Merge onto Foothills Pkwy/CO-157 N toward CU Stadium.",
+                        "turnType": 10,
+                        "startPoint": {
+                            "lng": -105.22715,
+                            "lat": 39.983173
+                        },
+                        "index": 6,
+                        "formattedTime": "00:06:41",
+                        "directionName": "North",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "157",
+                                "type": 505,
+                                "url": "http://icons.mqcdn.com/icons/rs505.png?n=157&d=NORTH",
+                                "direction": 1
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=39.98317337036133,-105.2271499633789|marker-7||40.04810333251953,-105.23664855957031|marker-8||&center=40.01563835144043,-105.23189926147461&defaultMarker=none&zoom=7&rand=-774536388&session=61119ae5-0049-5f21-02b4-3359-02619fb7c60b",
+                        "transportMode": "AUTO",
+                        "attributes": 1024,
+                        "time": 401,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_merge_right_sm.gif",
+                        "direction": 1
+                    },
+                    {
+                        "distance": 2.328,
+                        "streets": [
+                            "Diagonal Hwy",
+                            "CO-119"
+                        ],
+                        "narrative": "Turn slight left onto Diagonal Hwy/CO-119.",
+                        "turnType": 7,
+                        "startPoint": {
+                            "lng": -105.236649,
+                            "lat": 40.048103
+                        },
+                        "index": 7,
+                        "formattedTime": "00:02:36",
+                        "directionName": "Northeast",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "119",
+                                "type": 505,
+                                "url": "http://icons.mqcdn.com/icons/rs505.png?n=119",
+                                "direction": 0
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=40.04810333251953,-105.23664855957031|marker-8||40.073265075683594,-105.2074203491211|marker-9||&center=40.06068420410156,-105.2220344543457&defaultMarker=none&zoom=8&rand=-774536388&session=61119ae5-0049-5f21-02b4-3359-02619fb7c60b",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 156,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_slight_left_sm.gif",
+                        "direction": 3
+                    },
+                    {
+                        "distance": 0.171,
+                        "streets": [
+                            "63rd St"
+                        ],
+                        "narrative": "Turn right onto 63rd St.",
+                        "turnType": 2,
+                        "startPoint": {
+                            "lng": -105.20742,
+                            "lat": 40.073265
+                        },
+                        "index": 8,
+                        "formattedTime": "00:00:22",
+                        "directionName": "South",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=40.073265075683594,-105.2074203491211|marker-9||40.0711784362793,-105.20690155029297|marker-10||&center=40.072221755981445,-105.20716094970703&defaultMarker=none&zoom=12&rand=-774536388&session=61119ae5-0049-5f21-02b4-3359-02619fb7c60b",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 22,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_right_sm.gif",
+                        "direction": 4
+                    },
+                    {
+                        "distance": 0.358,
+                        "streets": [
+                            "Lookout Rd"
+                        ],
+                        "narrative": "Turn left onto Lookout Rd.",
+                        "turnType": 6,
+                        "startPoint": {
+                            "lng": -105.206902,
+                            "lat": 40.071178
+                        },
+                        "index": 9,
+                        "formattedTime": "00:00:50",
+                        "directionName": "East",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=40.0711784362793,-105.20690155029297|marker-10||40.07280349731445,-105.20095825195312|marker-11||&center=40.071990966796875,-105.20392990112305&defaultMarker=none&zoom=12&rand=-774536388&session=61119ae5-0049-5f21-02b4-3359-02619fb7c60b",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 50,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_left_sm.gif",
+                        "direction": 8
+                    },
+                    {
+                        "distance": 0,
+                        "streets": [],
+                        "narrative": "6562 LOOKOUT RD is on the right.",
+                        "turnType": -1,
+                        "startPoint": {
+                            "lng": -105.200958,
+                            "lat": 40.072803
+                        },
+                        "index": 10,
+                        "formattedTime": "00:00:00",
+                        "directionName": "",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 0,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/icon-dirs-end_sm.gif",
+                        "direction": 0
+                    }
+                ],
+                "hasFerry": false
+            }
+        ],
+        "options": {
+            "arteryWeights": [],
+            "cyclingRoadFactor": 1,
+            "timeType": 0,
+            "useTraffic": false,
+            "returnLinkDirections": false,
+            "countryBoundaryDisplay": true,
+            "enhancedNarrative": false,
+            "locale": "en_US",
+            "tryAvoidLinkIds": [],
+            "drivingStyle": 2,
+            "doReverseGeocode": true,
+            "generalize": -1,
+            "mustAvoidLinkIds": [],
+            "sideOfStreetDisplay": true,
+            "routeType": "FASTEST",
+            "avoidTimedConditions": false,
+            "routeNumber": 0,
+            "shapeFormat": "raw",
+            "maxWalkingDistance": -1,
+            "destinationManeuverDisplay": true,
+            "transferPenalty": -1,
+            "narrativeType": "text",
+            "walkingSpeed": -1,
+            "urbanAvoidFactor": -1,
+            "stateBoundaryDisplay": true,
+            "unit": "M",
+            "highwayEfficiency": 22,
+            "maxLinkId": 0,
+            "maneuverPenalty": -1,
+            "avoidTripIds": [],
+            "filterZoneFactor": -1,
+            "manmaps": "true"
+        },
+        "locations": [
+            {
+                "dragPoint": false,
+                "displayLatLng": {
+                    "lng": -104.975243,
+                    "lat": 39.734001
+                },
+                "adminArea4": "Denver",
+                "adminArea5": "Denver",
+                "postalCode": "80218",
+                "adminArea1": "US",
+                "adminArea3": "CO",
+                "type": "s",
+                "sideOfStreet": "L",
+                "geocodeQualityCode": "P1BAA",
+                "adminArea4Type": "County",
+                "linkId": 39905205,
+                "street": "1109 Ogden St",
+                "adminArea5Type": "City",
+                "geocodeQuality": "POINT",
+                "adminArea1Type": "Country",
+                "adminArea3Type": "State",
+                "latLng": {
+                    "lng": -104.975242,
+                    "lat": 39.734003
+                }
+            },
+            {
+                "dragPoint": false,
+                "displayLatLng": {
+                    "lng": -105.200958,
+                    "lat": 40.072803
+                },
+                "adminArea4": "Boulder",
+                "adminArea5": "Boulder",
+                "postalCode": "80301-3383",
+                "adminArea1": "US",
+                "adminArea3": "CO",
+                "type": "s",
+                "sideOfStreet": "R",
+                "geocodeQualityCode": "L1AAA",
+                "adminArea4Type": "County",
+                "linkId": 7787423,
+                "street": "6562 Lookout Rd",
+                "adminArea5Type": "City",
+                "geocodeQuality": "ADDRESS",
+                "adminArea1Type": "Country",
+                "adminArea3Type": "State",
+                "latLng": {
+                    "lng": -105.20096,
+                    "lat": 40.072804
+                }
+            }
+        ],
+        "time": 2389,
+        "hasUnpaved": false,
+        "locationSequence": [
+            0,
+            1
+        ],
+        "hasFerry": false
+    },
+    "info": {
+        "statuscode": 0,
+        "copyright": {
+            "imageAltText": "© 2021 MapQuest, Inc.",
+            "imageUrl": "http://api.mqcdn.com/res/mqlogo.gif",
+            "text": "© 2021 MapQuest, Inc."
+        },
+        "messages": []
+    }
+}

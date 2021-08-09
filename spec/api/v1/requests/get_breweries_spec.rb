@@ -15,20 +15,24 @@ RSpec.describe 'Breweries Endpoint' do
     stub_request(:get, "https://api.openweathermap.org/data/2.5/onecall?appid=#{ENV['WEATHER_API_KEY']}&exclude=#{exclude}&lat=#{lat}&lon=#{long}&units=#{units}")
       .to_return(status: 200, body: weather_response, headers: {})
 
-    @quantity = 5
+    @quantity_five = 5
     brewery_response = File.read('spec/fixtures/breweries_denver_5.json')
     lat_long = "#{lat},#{long}"
-    stub_request(:get, "https://api.openbrewerydb.org/breweries?by_dist=#{lat_long}&per_page=#{@quantity}")
+    stub_request(:get, "https://api.openbrewerydb.org/breweries?by_dist=#{lat_long}&per_page=#{@quantity_five}")
+      .to_return(status: 200, body: brewery_response, headers: {})
+
+    @quantity_two = 2
+    brewery_response = File.read('spec/fixtures/breweries_denver_2.json')
+    lat_long = "#{lat},#{long}"
+    stub_request(:get, "https://api.openbrewerydb.org/breweries?by_dist=#{lat_long}&per_page=#{@quantity_two}")
       .to_return(status: 200, body: brewery_response, headers: {})
   end
 
   it 'returns forecast and brewery information' do
-
-    get "/api/v1/breweries?location=#{@location}&quantity=#{@quantity}"
+    get "/api/v1/breweries?location=#{@location}&quantity=#{@quantity_five}"
+    output = JSON.parse(response.body, symbolize_names: true)
 
     expect(response).to be_successful
-
-    output = JSON.parse(response.body, symbolize_names: true)
 
     expect(output[:data][:id]).to eq(nil)
     expect(output[:data][:type]).to eq('breweries')
@@ -39,12 +43,18 @@ RSpec.describe 'Breweries Endpoint' do
     expect(output[:data][:attributes][:forecast]).to have_key(:temperature)
 
     expect(output[:data][:attributes][:breweries]).to be_a(Array)
-    expect(output[:data][:attributes][:breweries].length).to eq(@quantity)
+    expect(output[:data][:attributes][:breweries].length).to eq(@quantity_five)
     expect(output[:data][:attributes][:breweries].first).to have_key(:id)
     expect(output[:data][:attributes][:breweries].first).to have_key(:name)
     expect(output[:data][:attributes][:breweries].first).to have_key(:brewery_type)
   end
 
-  it 'returns the correct amount of breweries'
+  it 'returns the correct amount of breweries' do
+    get "/api/v1/breweries?location=#{@location}&quantity=#{@quantity_two}"
+    output = JSON.parse(response.body, symbolize_names: true)
+
+    expect(response).to be_successful
+    expect(output[:data][:attributes][:breweries].length).to eq(@quantity_two)
+  end
 
 end

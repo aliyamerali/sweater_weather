@@ -1,0 +1,42 @@
+[
+    {
+        "id": 8245,
+        "obdb_id": "aero-craft-brewing-denver",
+        "name": "Aero Craft Brewing",
+        "brewery_type": "planning",
+        "street": null,
+        "address_2": null,
+        "address_3": null,
+        "city": "Denver",
+        "state": "Colorado",
+        "county_province": null,
+        "postal_code": "80212-2199",
+        "country": "United States",
+        "longitude": "-104.984696",
+        "latitude": "39.7391428",
+        "phone": "3039185446",
+        "website_url": "http://www.aerocraft.beer",
+        "updated_at": "2018-08-24T00:00:00.000Z",
+        "created_at": "2018-07-24T00:00:00.000Z"
+    },
+    {
+        "id": 8962,
+        "obdb_id": "black-beak-brewing-denver",
+        "name": "Black Beak Brewing",
+        "brewery_type": "planning",
+        "street": null,
+        "address_2": null,
+        "address_3": null,
+        "city": "Denver",
+        "state": "Colorado",
+        "county_province": null,
+        "postal_code": "80237-1907",
+        "country": "United States",
+        "longitude": "-104.984696",
+        "latitude": "39.7391428",
+        "phone": "3032107836",
+        "website_url": null,
+        "updated_at": "2018-08-24T00:00:00.000Z",
+        "created_at": "2018-07-24T00:00:00.000Z"
+    }
+]

@@ -30,7 +30,7 @@ RSpec.describe 'Breweries Endpoint' do
 
     output = JSON.parse(response.body, symbolize_names: true)
 
-    expect(output[:data][:id]).to eq('null')
+    expect(output[:data][:id]).to eq(nil)
     expect(output[:data][:type]).to eq('breweries')
     expect(output[:data][:attributes][:destination]).to eq(@location)
 

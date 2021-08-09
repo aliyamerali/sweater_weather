@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Road Trip details endpoint' do
   before :each do
-    @user = User.new({
+    @user = User.create!({
                       "email": 'whatever@example.com',
                       "password": "password",
                       "password_confirmation": "password"
@@ -42,14 +42,35 @@ RSpec.describe 'Road Trip details endpoint' do
     expect(output[:data][:type]).to eq("roadtrip")
     expect(output[:data][:attributes][:start_city]).to eq(@starting)
     expect(output[:data][:attributes][:end_city]).to eq(@ending)
-    expect(output[:data][:attributes][:travel_time]).to eq('0 hours, 40 minutes')
+    expect(output[:data][:attributes][:travel_time]).to eq('0 hours, 39 minutes')
     expect(output[:data][:attributes][:weather_at_eta][:temperature]).to eq(92.82)
     expect(output[:data][:attributes][:weather_at_eta][:conditions]).to eq("few clouds")
   end
 
-  it 'if API key is invalid, returns 401 unauthorized'
+  it 'if API key is invalid, returns 401 unauthorized' do
+    request_body = {
+                    'origin': @starting,
+                    'destination': @ending,
+                    'api_key': '123445676789'
+                    }
+    post '/api/v1/road_trip', params: request_body, as: :json
+
+    output = JSON.parse(response.body, symbolize_names: true)
+    expect(output[:errors].first[:title]).to eq('Invalid Credentials')
+  end
+
+  it 'if API key is missing, returns 401 unauthorized' do
+    request_body = {
+                    'origin': @starting,
+                    'destination': @ending
+                    }
+    post '/api/v1/road_trip', params: request_body, as: :json
+
+    output = JSON.parse(response.body, symbolize_names: true)
+    expect(output[:errors].first[:title]).to eq('Invalid Credentials')
+  end
+
   it 'if no route is possible, returns impossible travel time and no weather'
-  it 'if API key is missing, returns 401 unauthorized'
   it 'if origin or destination is missing, returns 400 bad request'
   it 'if origin or destination is invalid, returns 400 bad request'
 end

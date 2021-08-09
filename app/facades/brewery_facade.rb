@@ -25,6 +25,7 @@ class BreweryFacade
     end
 
     breweries << BreweryService.find_breweries(lat_long, 50, final_page_num).take(final_page_count)
+
     breweries.flatten!
   end
 end

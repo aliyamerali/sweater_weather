@@ -5,7 +5,7 @@ class Api::V1::SessionsController < ApplicationController
     error = 'Invalid Credentials'
 
     if user.nil?
-      render json: ErrorSerializer.login_error(error), status: not_found
+      render json: ErrorSerializer.login_error(error), status: :not_found
     elsif user.authenticate(params[:password])
       render json: UserSerializer.new(user)
     else

@@ -1,6 +1,7 @@
 class Api::V1::SessionsController < ApplicationController
   def create
-    user = User.find_by(email: params[:email])
+    email = (params[:email]).downcase
+    user = User.find_by(email: email)
 
     if user.nil?
       error = "Invalid Credentials"

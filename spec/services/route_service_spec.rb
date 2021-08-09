@@ -4,15 +4,19 @@ RSpec.describe 'Route API Service' do
   before :each do
     @starting = '1109 N Ogden St, Denver, CO 80218'
     @ending = '6562 Lookout Rd, Boulder, CO 80301'
-    #mock out responses
+    @invalid_destination = 'ser5e4'
+
     successful_response = File.read('spec/fixtures/route_success.json')
     stub_request(:get, "http://www.mapquestapi.com/directions/v2/route?from=#{@starting}to=#{@ending}&key=#{ENV['MAPQUEST_API_KEY']}")
       .to_return(status: 200, body: successful_response, headers: {})
 
-    failed_response = File.read('spec/fixtures/route_failure.json')
+    failed_response_1 = File.read('spec/fixtures/route_failure.json')
     stub_request(:get, "http://www.mapquestapi.com/directions/v2/route?from=#{@starting}to=&key=#{ENV['MAPQUEST_API_KEY']}")
-      .to_return(status: 200, body: failed_response, headers: {})
+      .to_return(status: 200, body: failed_response_1, headers: {})
 
+    failed_response_2 = File.read('spec/fixtures/route_failure_2.json')
+    stub_request(:get, "http://www.mapquestapi.com/directions/v2/route?from=#{@starting}to=#{@invalid_destination}&key=#{ENV['MAPQUEST_API_KEY']}")
+      .to_return(status: 200, body: failed_response_2, headers: {})
   end
 
   describe '.get_route' do
@@ -26,6 +30,12 @@ RSpec.describe 'Route API Service' do
       response = RouteService.get_route(@starting, "")
 
       expect(response[:info][:messages].first).to eq("At least two locations must be provided.")
+    end
+
+    it 'returns an error if one or more location is invalid' do
+      response = RouteService.get_route(@starting, @invalid_destination)
+
+      expect(response[:info][:messages].first).to eq("We are unable to route with the given locations.")
     end
   end
 end

@@ -7,8 +7,8 @@ RSpec.describe 'Road Trip details endpoint' do
                       "password": "password",
                       "password_confirmation": "password"
                     })
-    @starting = '1109 N Ogden St, Denver, CO 80218'
-    @ending = '6562 Lookout Rd, Boulder, CO 80301'
+    @starting = 'Denver,CO'
+    @ending = 'Longmont,CO'
     @invalid_destination = 'ser5e4'
     @incalculable_destination = 'Colombia'
 
@@ -27,6 +27,17 @@ RSpec.describe 'Road Trip details endpoint' do
     failed_response_3 = File.read('spec/fixtures/route_failure_3.json')
     stub_request(:get, "http://www.mapquestapi.com/directions/v2/route?from=#{@starting}to=#{@incalculable_destination}&key=#{ENV['MAPQUEST_API_KEY']}")
       .to_return(status: 200, body: failed_response_3, headers: {})
+
+    destination_city = 'Longmont,CO'
+    lat_long_response = File.read('spec/fixtures/lat_long_destination.json')
+    stub_request(:get,"http://www.mapquestapi.com/geocoding/v1/address?key=#{ENV['MAPQUEST_API_KEY']}&location=#{destination_city}")
+      .to_return(status: 200, body: lat_long_response, headers: {})
+
+    lat = 40.165729
+    long = -105.101194
+    weather_at_destination = File.read('spec/fixtures/weather_at_destination.json')
+    stub_request(:get, "https://api.openweathermap.org/data/2.5/onecall?lat=#{lat}&lon=#{long}&exclude=minutely,alerts&appid=#{ENV['WEATHER_API_KEY']}&units=imperial")
+      .to_return(status: 200, body: weather_at_destination, headers: {})
   end
 
   it 'if API key is valid, returns travel time and weather at ETA' do
@@ -43,8 +54,8 @@ RSpec.describe 'Road Trip details endpoint' do
     expect(output[:data][:attributes][:start_city]).to eq(@starting)
     expect(output[:data][:attributes][:end_city]).to eq(@ending)
     expect(output[:data][:attributes][:travel_time]).to eq('0 hours, 39 minutes')
-    expect(output[:data][:attributes][:weather_at_eta][:temperature]).to eq(92.82)
-    expect(output[:data][:attributes][:weather_at_eta][:conditions]).to eq("few clouds")
+    expect(output[:data][:attributes][:weather_at_eta][:temperature]).to eq(90.91)
+    expect(output[:data][:attributes][:weather_at_eta][:conditions]).to eq("clear sky")
   end
 
   it 'if API key is invalid, returns 401 unauthorized' do

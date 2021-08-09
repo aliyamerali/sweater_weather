@@ -111,7 +111,7 @@ RSpec.describe 'User registration and login' do
       output = JSON.parse(response.body, symbolize_names: true)
 
       expect(response.status).to eq(401)
-      expect(output[:errors].first).to eq("Invalid Credentials")
+      expect(output[:errors].first[:title]).to eq("Invalid Credentials")
     end
 
     it 'returns a 404 not found error if email is not registered' do
@@ -124,7 +124,7 @@ RSpec.describe 'User registration and login' do
       output = JSON.parse(response.body, symbolize_names: true)
 
       expect(response.status).to eq(404)
-      expect(output[:errors].first).to eq("Invalid Credentials")
+      expect(output[:errors].first[:title]).to eq("Invalid Credentials")
     end
   end
 end

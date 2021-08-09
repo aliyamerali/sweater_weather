@@ -1,16 +1,15 @@
 class Api::V1::SessionsController < ApplicationController
   def create
-    email = (params[:email]).downcase
+    email = params[:email].downcase
     user = User.find_by(email: email)
+    error = 'Invalid Credentials'
 
     if user.nil?
-      error = "Invalid Credentials"
-      render json: ErrorSerializer.login_error(error), status: 404
+      render json: ErrorSerializer.login_error(error), status: not_found
     elsif user.authenticate(params[:password])
       render json: UserSerializer.new(user)
     else
-      error = "Invalid Credentials"
-      render json: ErrorSerializer.login_error(error), status: 401
+      render json: ErrorSerializer.login_error(error), status: :unauthorized
     end
   end
 end

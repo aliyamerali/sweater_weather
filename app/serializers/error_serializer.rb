@@ -3,7 +3,6 @@ class ErrorSerializer
     { errors:
         [
           { title: error }
-        ]
-    }
+        ] }
   end
 end

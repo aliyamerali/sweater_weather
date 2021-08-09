@@ -70,7 +70,7 @@ RSpec.describe 'Breweries Endpoint' do
     output = JSON.parse(response.body, symbolize_names: true)
 
     expect(response.status).to eq(400)
-    expect(output[:response]).to eq("Bad Request")
+    expect(output[:response]).to eq('Invalid Location')
   end
 
   it 'makes multiple calls if the quantity requested is greater than 50' do

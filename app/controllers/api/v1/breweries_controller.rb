@@ -7,7 +7,7 @@ class Api::V1::BreweriesController < ApplicationController
       breweries = BreweryFacade.find_breweries(location, params[:quantity])
       render json: BrewerySerializer.find_breweries(location, forecast, breweries)
     else
-      render json: { response: 'Bad Request' }, status: :bad_request
+      render json: { response: 'Invalid Location' }, status: :bad_request
     end
   end
 end

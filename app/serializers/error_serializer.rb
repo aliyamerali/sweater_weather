@@ -1,8 +1,15 @@
 class ErrorSerializer
-  def self.login_error(error)
+  def initialize(error_object)
+    @error_object = error_object
+  end
+
+  def serialized_json
     { errors:
         [
-          { title: error }
+          { status: @error_object.status,
+            message: @error_object.error_message,
+            code: @error_object.code
+          }
         ] }
   end
 end

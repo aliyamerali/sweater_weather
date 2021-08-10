@@ -67,4 +67,17 @@ RSpec.describe 'Weather endpoint returns forecast for a given city' do
     expect(output[:attributes][:hourly_weather].first.keys.include?(:weather)).to eq(false)
   end
 
+  it 'returns an error if invalid city input' do
+    empty_location = ""
+    lat_long_response = File.read('spec/fixtures/lat_long_failure.json')
+    stub_request(:get,"http://www.mapquestapi.com/geocoding/v1/address?key=#{ENV['MAPQUEST_API_KEY']}&location=#{empty_location}").
+        to_return(status: 200, body: lat_long_response, headers: {})
+
+    get "/api/v1/forecast?location=#{empty_location}"
+    output = JSON.parse(response.body, symbolize_names: true)
+
+    expect(output[:errors].first[:code]).to eq(400)
+    expect(output[:errors].first[:status]).to eq('Bad Request')
+    expect(output[:errors].first[:message]).to eq('Illegal argument from request: Insufficient info for location')
+  end
 end

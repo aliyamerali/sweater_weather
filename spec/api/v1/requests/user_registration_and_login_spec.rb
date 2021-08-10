@@ -127,10 +127,12 @@ RSpec.describe 'User registration and login' do
       output = JSON.parse(response.body, symbolize_names: true)
 
       expect(response.status).to eq(401)
-      expect(output[:errors].first[:title]).to eq("Invalid Credentials")
+      expect(output[:errors].first[:message]).to eq('API Key Invalid')
+      expect(output[:errors].first[:status]).to eq('Invalid Credentials')
+      expect(output[:errors].first[:code]).to eq(401)
     end
 
-    it 'returns a 404 not found error if email is not registered' do
+    it 'returns a 401 not found error if email is not registered' do
       #create a user
       post '/api/v1/users', params: @body, as: :json
       user = User.last
@@ -139,8 +141,10 @@ RSpec.describe 'User registration and login' do
       post '/api/v1/sessions', params: @login_without_email_body, as: :json
       output = JSON.parse(response.body, symbolize_names: true)
 
-      expect(response.status).to eq(404)
-      expect(output[:errors].first[:title]).to eq("Invalid Credentials")
+      expect(response.status).to eq(401)
+      expect(output[:errors].first[:message]).to eq('API Key Invalid')
+      expect(output[:errors].first[:status]).to eq('Invalid Credentials')
+      expect(output[:errors].first[:code]).to eq(401)
     end
   end
 end

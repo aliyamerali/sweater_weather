@@ -4,7 +4,7 @@ RSpec.describe 'Forecast Facade' do
   before :each do
     @location = "denver,co"
     lat_long_response = File.read('spec/fixtures/lat_long_successful.json')
-    stub_request(:get,"http://www.mapquestapi.com/geocoding/v1/address?key=#{ENV['GEOCODE_API_KEY']}&location=#{@location}").
+    stub_request(:get,"http://www.mapquestapi.com/geocoding/v1/address?key=#{ENV['MAPQUEST_API_KEY']}&location=#{@location}").
         to_return(status: 200, body: lat_long_response, headers: {})
 
     lat = 39.738453

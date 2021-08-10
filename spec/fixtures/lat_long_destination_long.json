@@ -1,0 +1,55 @@
+{
+    "info": {
+        "statuscode": 0,
+        "copyright": {
+            "text": "© 2021 MapQuest, Inc.",
+            "imageUrl": "http://api.mqcdn.com/res/mqlogo.gif",
+            "imageAltText": "© 2021 MapQuest, Inc."
+        },
+        "messages": []
+    },
+    "options": {
+        "maxResults": -1,
+        "thumbMaps": true,
+        "ignoreLatLngInput": false
+    },
+    "results": [
+        {
+            "providedLocation": {
+                "location": "anchorage,alaska"
+            },
+            "locations": [
+                {
+                    "street": "",
+                    "adminArea6": "",
+                    "adminArea6Type": "Neighborhood",
+                    "adminArea5": "Anchorage",
+                    "adminArea5Type": "City",
+                    "adminArea4": "Municipality of Anchorage",
+                    "adminArea4Type": "County",
+                    "adminArea3": "AK",
+                    "adminArea3Type": "State",
+                    "adminArea1": "US",
+                    "adminArea1Type": "Country",
+                    "postalCode": "",
+                    "geocodeQualityCode": "A5XAX",
+                    "geocodeQuality": "CITY",
+                    "dragPoint": false,
+                    "sideOfStreet": "N",
+                    "linkId": "282039478",
+                    "unknownInput": "",
+                    "type": "s",
+                    "latLng": {
+                        "lat": 61.216583,
+                        "lng": -149.899597
+                    },
+                    "displayLatLng": {
+                        "lat": 61.216583,
+                        "lng": -149.899597
+                    },
+                    "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&type=map&size=225,160&locations=61.216583,-149.899597|marker-sm-50318A-1&scalebar=true&zoom=12&rand=-91588457"
+                }
+            ]
+        }
+    ]
+}

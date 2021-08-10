@@ -1,0 +1,55 @@
+{
+    "info": {
+        "statuscode": 0,
+        "copyright": {
+            "text": "© 2021 MapQuest, Inc.",
+            "imageUrl": "http://api.mqcdn.com/res/mqlogo.gif",
+            "imageAltText": "© 2021 MapQuest, Inc."
+        },
+        "messages": []
+    },
+    "options": {
+        "maxResults": -1,
+        "thumbMaps": true,
+        "ignoreLatLngInput": false
+    },
+    "results": [
+        {
+            "providedLocation": {
+                "location": "longmont,co"
+            },
+            "locations": [
+                {
+                    "street": "",
+                    "adminArea6": "",
+                    "adminArea6Type": "Neighborhood",
+                    "adminArea5": "Longmont",
+                    "adminArea5Type": "City",
+                    "adminArea4": "Boulder County",
+                    "adminArea4Type": "County",
+                    "adminArea3": "CO",
+                    "adminArea3Type": "State",
+                    "adminArea1": "US",
+                    "adminArea1Type": "Country",
+                    "postalCode": "",
+                    "geocodeQualityCode": "A5XAX",
+                    "geocodeQuality": "CITY",
+                    "dragPoint": false,
+                    "sideOfStreet": "N",
+                    "linkId": "282041101",
+                    "unknownInput": "",
+                    "type": "s",
+                    "latLng": {
+                        "lat": 40.165729,
+                        "lng": -105.101194
+                    },
+                    "displayLatLng": {
+                        "lat": 40.165729,
+                        "lng": -105.101194
+                    },
+                    "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&type=map&size=225,160&locations=40.165729,-105.101194|marker-sm-50318A-1&scalebar=true&zoom=12&rand=1510618034"
+                }
+            ]
+        }
+    ]
+}

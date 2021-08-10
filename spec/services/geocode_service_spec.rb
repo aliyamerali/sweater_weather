@@ -7,7 +7,7 @@ RSpec.describe 'Geocode location service' do
       it 'takes in a city,state and returns lat_long response' do
         location = "denver,co"
         lat_long_response = File.read('spec/fixtures/lat_long_successful.json')
-        stub_request(:get,"http://www.mapquestapi.com/geocoding/v1/address?key=#{ENV['GEOCODE_API_KEY']}&location=#{location}").
+        stub_request(:get,"http://www.mapquestapi.com/geocoding/v1/address?key=#{ENV['MAPQUEST_API_KEY']}&location=#{location}").
             to_return(status: 200, body: lat_long_response, headers: {})
 
         response = GeocodeService.lat_long(location)
@@ -24,7 +24,7 @@ RSpec.describe 'Geocode location service' do
       it 'returns a 400 if not enough data given' do
         location = ""
         lat_long_response = File.read('spec/fixtures/lat_long_failure.json')
-        stub_request(:get,"http://www.mapquestapi.com/geocoding/v1/address?key=#{ENV['GEOCODE_API_KEY']}&location=#{location}").
+        stub_request(:get,"http://www.mapquestapi.com/geocoding/v1/address?key=#{ENV['MAPQUEST_API_KEY']}&location=#{location}").
             to_return(status: 200, body: lat_long_response, headers: {})
 
         response = GeocodeService.lat_long(location)

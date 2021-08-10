@@ -1,0 +1,129 @@
+{
+    "route": {
+        "hasTollRoad": false,
+        "hasBridge": false,
+        "distance": 0,
+        "hasTimedRestriction": false,
+        "hasTunnel": false,
+        "hasHighway": false,
+        "computedWaypoints": [],
+        "routeError": {
+            "errorCode": 202,
+            "message": ""
+        },
+        "formattedTime": "00:00:00",
+        "sessionId": "",
+        "hasAccessRestriction": false,
+        "realTime": -1,
+        "hasSeasonalClosure": false,
+        "hasCountryCross": false,
+        "fuelUsed": 0,
+        "legs": [],
+        "options": {
+            "arteryWeights": [],
+            "cyclingRoadFactor": 1,
+            "timeType": 0,
+            "useTraffic": false,
+            "returnLinkDirections": false,
+            "countryBoundaryDisplay": true,
+            "enhancedNarrative": false,
+            "locale": "en_US",
+            "tryAvoidLinkIds": [],
+            "drivingStyle": 2,
+            "doReverseGeocode": true,
+            "generalize": -1,
+            "mustAvoidLinkIds": [],
+            "sideOfStreetDisplay": true,
+            "routeType": "FASTEST",
+            "avoidTimedConditions": false,
+            "routeNumber": 0,
+            "shapeFormat": "raw",
+            "maxWalkingDistance": -1,
+            "destinationManeuverDisplay": true,
+            "transferPenalty": -1,
+            "narrativeType": "text",
+            "walkingSpeed": -1,
+            "urbanAvoidFactor": -1,
+            "stateBoundaryDisplay": true,
+            "unit": "M",
+            "highwayEfficiency": 22,
+            "maxLinkId": 0,
+            "maneuverPenalty": -1,
+            "avoidTripIds": [],
+            "filterZoneFactor": -1,
+            "manmaps": "true"
+        },
+        "locations": [
+            {
+                "dragPoint": false,
+                "displayLatLng": {
+                    "lng": -104.984853,
+                    "lat": 39.738453
+                },
+                "adminArea4": "Denver County",
+                "adminArea5": "Denver",
+                "postalCode": "",
+                "adminArea1": "US",
+                "adminArea3": "CO",
+                "type": "s",
+                "sideOfStreet": "N",
+                "geocodeQualityCode": "A5XAX",
+                "adminArea4Type": "County",
+                "linkId": 58077864,
+                "street": "",
+                "adminArea5Type": "City",
+                "geocodeQuality": "CITY",
+                "adminArea1Type": "Country",
+                "adminArea3Type": "State",
+                "latLng": {
+                    "lng": -104.984853,
+                    "lat": 39.738453
+                }
+            },
+            {
+                "dragPoint": false,
+                "displayLatLng": {
+                    "lng": -73.076401,
+                    "lat": 3.904655
+                },
+                "adminArea4": "",
+                "adminArea5": "",
+                "postalCode": "",
+                "adminArea1": "CO",
+                "adminArea3": "",
+                "type": "s",
+                "sideOfStreet": "N",
+                "geocodeQualityCode": "A1XAX",
+                "adminArea4Type": "County",
+                "linkId": 39346738,
+                "street": "",
+                "adminArea5Type": "City",
+                "geocodeQuality": "COUNTRY",
+                "adminArea1Type": "Country",
+                "adminArea3Type": "State",
+                "latLng": {
+                    "lng": -73.076401,
+                    "lat": 3.904655
+                }
+            }
+        ],
+        "time": 0,
+        "hasUnpaved": false,
+        "locationSequence": [
+            0,
+            1
+        ],
+        "hasFerry": false
+    },
+    "info": {
+        "statuscode": 602,
+        "copyright": {
+            "imageAltText": "© 2021 MapQuest, Inc.",
+            "imageUrl": "http://api.mqcdn.com/res/mqlogo.gif",
+            "text": "© 2021 MapQuest, Inc."
+        },
+        "messages": [
+            "Unable to calculate route."
+        ]
+    }
+}

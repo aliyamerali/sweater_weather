@@ -1,0 +1,19 @@
+{
+    "route": {
+        "routeError": {
+            "errorCode": 211,
+            "message": ""
+        }
+    },
+    "info": {
+        "statuscode": 611,
+        "copyright": {
+            "imageAltText": "© 2021 MapQuest, Inc.",
+            "imageUrl": "http://api.mqcdn.com/res/mqlogo.gif",
+            "text": "© 2021 MapQuest, Inc."
+        },
+        "messages": [
+            "At least two locations must be provided."
+        ]
+    }
+}

@@ -8,19 +8,19 @@ RSpec.describe 'Route API Service' do
     @incalculable_destination = 'Colombia'
 
     successful_response = File.read('spec/fixtures/route_success.json')
-    stub_request(:get, "http://www.mapquestapi.com/directions/v2/route?from=#{@starting}to=#{@ending}&key=#{ENV['MAPQUEST_API_KEY']}")
+    stub_request(:get, "http://www.mapquestapi.com/directions/v2/route?from=#{@starting}&to=#{@ending}&key=#{ENV['MAPQUEST_API_KEY']}")
       .to_return(status: 200, body: successful_response, headers: {})
 
     failed_response_1 = File.read('spec/fixtures/route_failure.json')
-    stub_request(:get, "http://www.mapquestapi.com/directions/v2/route?from=#{@starting}to=&key=#{ENV['MAPQUEST_API_KEY']}")
+    stub_request(:get, "http://www.mapquestapi.com/directions/v2/route?from=#{@starting}&to=&key=#{ENV['MAPQUEST_API_KEY']}")
       .to_return(status: 200, body: failed_response_1, headers: {})
 
     failed_response_2 = File.read('spec/fixtures/route_failure_2.json')
-    stub_request(:get, "http://www.mapquestapi.com/directions/v2/route?from=#{@starting}to=#{@invalid_destination}&key=#{ENV['MAPQUEST_API_KEY']}")
+    stub_request(:get, "http://www.mapquestapi.com/directions/v2/route?from=#{@starting}&to=#{@invalid_destination}&key=#{ENV['MAPQUEST_API_KEY']}")
       .to_return(status: 200, body: failed_response_2, headers: {})
 
     failed_response_3 = File.read('spec/fixtures/route_failure_3.json')
-    stub_request(:get, "http://www.mapquestapi.com/directions/v2/route?from=#{@starting}to=#{@incalculable_destination}&key=#{ENV['MAPQUEST_API_KEY']}")
+    stub_request(:get, "http://www.mapquestapi.com/directions/v2/route?from=#{@starting}&to=#{@incalculable_destination}&key=#{ENV['MAPQUEST_API_KEY']}")
       .to_return(status: 200, body: failed_response_3, headers: {})
   end
 

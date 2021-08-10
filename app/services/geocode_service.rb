@@ -1,6 +1,8 @@
 class GeocodeService
   def self.lat_long(location)
-    response = Faraday.get "http://www.mapquestapi.com/geocoding/v1/address?key=#{ENV['MAPQUEST_API_KEY']}&location=#{location}"
+    response = Rails.cache.fetch "#{location}_response", expires_in: 24.hours do
+      Faraday.get "http://www.mapquestapi.com/geocoding/v1/address?key=#{ENV['MAPQUEST_API_KEY']}&location=#{location}"
+    end
 
     if response.body.empty?
       Error.new('Illegal argument from request: Insufficient info for location', 'Bad Request', 400)

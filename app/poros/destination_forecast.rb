@@ -8,7 +8,7 @@ class DestinationForecast
 
   def temp_at_arrival_time(weather, duration)
     if duration[:hours] > 48
-      weather[:daily][(duration[:hours]/24)][:temp][:day]
+      weather[:daily][(duration[:hours] / 24)][:temp][:day]
     else
       weather[:hourly][duration[:hours]][:temp]
     end
@@ -16,7 +16,7 @@ class DestinationForecast
 
   def conditions_at_arrival_time(weather, duration)
     if duration[:hours] > 48
-      weather[:daily][(duration[:hours]/24)][:weather].first[:description]
+      weather[:daily][(duration[:hours] / 24)][:weather].first[:description]
     else
       weather[:hourly][duration[:hours]][:weather].first[:description]
     end

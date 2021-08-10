@@ -3,7 +3,7 @@ class RoadtripSerializer
     {
       data: {
         id: nil,
-        type: "roadtrip",
+        type: 'roadtrip',
         attributes: {
           start_city: roadtrip.origin,
           end_city: roadtrip.destination,

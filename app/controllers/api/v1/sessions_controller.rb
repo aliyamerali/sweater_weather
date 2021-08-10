@@ -1,5 +1,5 @@
 class Api::V1::SessionsController < ApplicationController
-  @@login_error = Error.new('API Key Invalid','Invalid Credentials', 401)
+  @@login_error = Error.new('Invalid Credentials','Invalid Credentials', 401)
 
   def create
     email = params[:email].downcase

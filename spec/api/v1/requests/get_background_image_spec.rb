@@ -42,4 +42,18 @@ RSpec.describe "Get background image for weather page" do
     expect(output[:data][:attributes]).to have_key(:author_profile)
     expect(output[:data][:attributes][:author_profile].split('?').last).to eq('utm_source=sweater_weather&utm_medium=referral')
   end
+
+  it 'returns an error if invalid city input' do
+    empty_location = ""
+    lat_long_response = File.read('spec/fixtures/lat_long_failure.json')
+    stub_request(:get,"http://www.mapquestapi.com/geocoding/v1/address?key=#{ENV['MAPQUEST_API_KEY']}&location=#{empty_location}").
+        to_return(status: 200, body: lat_long_response, headers: {})
+
+    get "/api/v1/backgrounds?location=#{empty_location}"
+    output = JSON.parse(response.body, symbolize_names: true)
+
+    expect(output[:errors].first[:code]).to eq(400)
+    expect(output[:errors].first[:status]).to eq('Bad Request')
+    expect(output[:errors].first[:message]).to eq('Illegal argument from request: Insufficient info for location')
+  end
 end

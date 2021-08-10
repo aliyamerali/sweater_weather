@@ -80,5 +80,4 @@ RSpec.describe 'Weather endpoint returns forecast for a given city' do
     expect(output[:errors].first[:status]).to eq('Bad Request')
     expect(output[:errors].first[:message]).to eq('Illegal argument from request: Insufficient info for location')
   end
-
 end

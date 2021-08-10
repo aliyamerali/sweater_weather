@@ -135,7 +135,7 @@ RSpec.describe 'User registration and login' do
       output = JSON.parse(response.body, symbolize_names: true)
 
       expect(response.status).to eq(401)
-      expect(output[:errors].first[:message]).to eq('API Key Invalid')
+      expect(output[:errors].first[:message]).to eq('Invalid Credentials')
       expect(output[:errors].first[:status]).to eq('Invalid Credentials')
       expect(output[:errors].first[:code]).to eq(401)
     end
@@ -150,7 +150,7 @@ RSpec.describe 'User registration and login' do
       output = JSON.parse(response.body, symbolize_names: true)
 
       expect(response.status).to eq(401)
-      expect(output[:errors].first[:message]).to eq('API Key Invalid')
+      expect(output[:errors].first[:message]).to eq('Invalid Credentials')
       expect(output[:errors].first[:status]).to eq('Invalid Credentials')
       expect(output[:errors].first[:code]).to eq(401)
     end

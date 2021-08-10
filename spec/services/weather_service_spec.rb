@@ -12,7 +12,7 @@ RSpec.describe 'Weather service' do
         stub_request(:get, "https://api.openweathermap.org/data/2.5/onecall?appid=#{ENV['WEATHER_API_KEY']}&exclude=#{exclude}&lat=#{lat}&lon=#{long}&units=#{units}")
           .to_return(status: 200, body: weather_response, headers: {})
 
-        response = WeatherService.forecast(lat, long)
+        response = WeatherService.forecast(lat, long, units)
 
         expect(response).to have_key(:current)
         expect(response).to have_key(:daily)
@@ -30,7 +30,7 @@ RSpec.describe 'Weather service' do
         stub_request(:get, "https://api.openweathermap.org/data/2.5/onecall?appid=#{ENV['WEATHER_API_KEY']}&exclude=#{exclude}&lat=#{lat}&lon=#{long}&units=#{units}")
           .to_return(status: 200, body: weather_response, headers: {})
 
-        response = WeatherService.forecast(lat, long)
+        response = WeatherService.forecast(lat, long, units)
 
         expect(response[:cod]).to eq('400')
       end
@@ -43,7 +43,7 @@ RSpec.describe 'Weather service' do
         weather_response = File.read('spec/fixtures/weather_failure.json')
         stub_request(:get, "https://api.openweathermap.org/data/2.5/onecall?appid=#{ENV['WEATHER_API_KEY']}&exclude=#{exclude}&lat=#{lat}&lon=#{long}&units=#{units}")
           .to_return(status: 200, body: weather_response, headers: {})
-        response = WeatherService.forecast(lat, long)
+        response = WeatherService.forecast(lat, long, units)
 
         expect(response[:cod]).to eq('400')
       end

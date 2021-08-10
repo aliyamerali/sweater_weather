@@ -9,11 +9,16 @@ RSpec.describe 'Weather endpoint returns forecast for a given city' do
 
     lat = 39.738453
     long = -104.984853
-    units="imperial"
+    default_units="imperial"
+    alternate_units="metric"
     exclude = "minutely,alerts"
-    weather_response = File.read('spec/fixtures/weather_successful.json')
-    stub_request(:get, "https://api.openweathermap.org/data/2.5/onecall?appid=#{ENV['WEATHER_API_KEY']}&exclude=#{exclude}&lat=#{lat}&lon=#{long}&units=#{units}")
-      .to_return(status: 200, body: weather_response, headers: {})
+    weather_response_f = File.read('spec/fixtures/weather_successful.json')
+    stub_request(:get, "https://api.openweathermap.org/data/2.5/onecall?appid=#{ENV['WEATHER_API_KEY']}&exclude=#{exclude}&lat=#{lat}&lon=#{long}&units=#{default_units}")
+      .to_return(status: 200, body: weather_response_f, headers: {})
+
+    weather_response_c = File.read('spec/fixtures/weather_successful_metric.json')
+    stub_request(:get, "https://api.openweathermap.org/data/2.5/onecall?appid=#{ENV['WEATHER_API_KEY']}&exclude=#{exclude}&lat=#{lat}&lon=#{long}&units=#{alternate_units}")
+      .to_return(status: 200, body: weather_response_c, headers: {})
   end
 
   it 'takes in a city and state and returns forecast' do
@@ -79,5 +84,26 @@ RSpec.describe 'Weather endpoint returns forecast for a given city' do
     expect(output[:errors].first[:code]).to eq(400)
     expect(output[:errors].first[:status]).to eq('Bad Request')
     expect(output[:errors].first[:message]).to eq('Illegal argument from request: Insufficient info for location')
+  end
+
+  it 'can take a unit parameter to return imperial or metric temperature' do
+    get "/api/v1/forecast?location=#{@location}&units=metric"
+
+    output = JSON.parse(response.body, symbolize_names: true)[:data]
+
+    expect(response).to be_successful
+    expect(output[:id]).to eq(nil)
+    expect(output[:type]).to eq('forecast')
+    expect(output[:attributes].keys).to eq([:current_weather, :daily_weather, :hourly_weather])
+
+    expect(output[:attributes][:current_weather][:temperature]).to eq(33.96)
+
+    expect(output[:attributes][:daily_weather].first[:max_temp]).to eq(36.06)
+    expect(output[:attributes][:daily_weather].first[:min_temp]).to eq(22.27)
+
+    expect(output[:attributes][:hourly_weather].first[:temperature]).to eq(33.96)
+
+    expect(output[:attributes].keys.include?(:minutely_weather)).to eq(false)
+    expect(output[:attributes].keys.include?(:alerts)).to eq(false)
   end
 end

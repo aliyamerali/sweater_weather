@@ -61,9 +61,11 @@ RSpec.describe 'User registration and login' do
                       }
       post '/api/v1/users', params: mismatch_body, as: :json
 
+      output = JSON.parse(response.body, symbolize_names: true)
       expect(response.status).to eq(400)
-      message = JSON.parse(response.body, symbolize_names: true)
-      expect(message[:response]).to eq({:password_confirmation=>["doesn't match Password"]})
+      expect(output[:errors].first[:message]).to eq({:password_confirmation=>["doesn't match Password"]})
+      expect(output[:errors].first[:status]).to eq('Invalid Request')
+      expect(output[:errors].first[:code]).to eq(400)
     end
 
     it 'does not create record if email is already registered' do
@@ -71,9 +73,12 @@ RSpec.describe 'User registration and login' do
       expect(response).to be_successful
 
       post '/api/v1/users', params: @body, as: :json
+
+      output = JSON.parse(response.body, symbolize_names: true)
       expect(response.status).to eq(400)
-      message = JSON.parse(response.body, symbolize_names: true)
-      expect(message[:response]).to eq({email: ["has already been taken"]})
+      expect(output[:errors].first[:message]).to eq({:email => ["has already been taken"]})
+      expect(output[:errors].first[:status]).to eq('Invalid Request')
+      expect(output[:errors].first[:code]).to eq(400)
     end
 
     it 'does not create record if any field is missing' do
@@ -84,9 +89,12 @@ RSpec.describe 'User registration and login' do
                       }
       post '/api/v1/users', params: incomplete_body, as: :json
 
+
+      output = JSON.parse(response.body, symbolize_names: true)
       expect(response.status).to eq(400)
-      message = JSON.parse(response.body, symbolize_names: true)
-      expect(message[:response]).to eq({:password=>["can't be blank"], :password_digest=>["can't be blank"]})
+      expect(output[:errors].first[:message]).to eq({:password=>["can't be blank"], :password_digest=>["can't be blank"]})
+      expect(output[:errors].first[:status]).to eq('Invalid Request')
+      expect(output[:errors].first[:code]).to eq(400)
     end
   end
 

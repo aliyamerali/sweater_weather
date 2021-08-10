@@ -119,7 +119,9 @@ RSpec.describe 'Road Trip details endpoint' do
 
     output = JSON.parse(response.body, symbolize_names: true)
     expect(response.status).to eq(401)
-    expect(output[:errors].first[:title]).to eq('Invalid Credentials')
+    expect(output[:errors].first[:message]).to eq('API Key Invalid')
+    expect(output[:errors].first[:status]).to eq('Invalid Credentials')
+    expect(output[:errors].first[:code]).to eq(401)
   end
 
   it 'if API key is missing, returns 401 unauthorized' do
@@ -131,7 +133,9 @@ RSpec.describe 'Road Trip details endpoint' do
 
     output = JSON.parse(response.body, symbolize_names: true)
     expect(response.status).to eq(401)
-    expect(output[:errors].first[:title]).to eq('Invalid Credentials')
+    expect(output[:errors].first[:message]).to eq('API Key Invalid')
+    expect(output[:errors].first[:status]).to eq('Invalid Credentials')
+    expect(output[:errors].first[:code]).to eq(401)
   end
 
   it 'if origin or destination is missing, returns 400 bad request' do
@@ -143,6 +147,8 @@ RSpec.describe 'Road Trip details endpoint' do
 
     output = JSON.parse(response.body, symbolize_names: true)
     expect(response.status).to eq(400)
-    expect(output[:errors].first[:title]).to eq('Invalid Request')
+    expect(output[:errors].first[:message]).to eq('Must have a valid origin and destination')
+    expect(output[:errors].first[:status]).to eq('Invalid Request')
+    expect(output[:errors].first[:code]).to eq(400)
   end
 end

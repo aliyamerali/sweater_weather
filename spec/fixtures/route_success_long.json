@@ -1,0 +1,1455 @@
+{
+    "route": {
+        "hasTollRoad": false,
+        "hasBridge": true,
+        "boundingBox": {
+            "lr": {
+                "lng": -104.982323,
+                "lat": 39.738453
+            },
+            "ul": {
+                "lng": -149.903748,
+                "lat": 63.335957
+            }
+        },
+        "distance": 3219.8403,
+        "hasTimedRestriction": false,
+        "hasTunnel": false,
+        "hasHighway": true,
+        "computedWaypoints": [],
+        "routeError": {
+            "errorCode": -400,
+            "message": ""
+        },
+        "formattedTime": "51:40:37",
+        "sessionId": "6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+        "hasAccessRestriction": false,
+        "realTime": 198799,
+        "hasSeasonalClosure": false,
+        "hasCountryCross": true,
+        "fuelUsed": 151.33,
+        "legs": [
+            {
+                "hasTollRoad": false,
+                "hasBridge": true,
+                "destNarrative": "Proceed to ANCHORAGE, AK.",
+                "distance": 3219.8403,
+                "hasTimedRestriction": false,
+                "hasTunnel": false,
+                "hasHighway": true,
+                "index": 0,
+                "formattedTime": "51:40:37",
+                "origIndex": 2,
+                "hasAccessRestriction": false,
+                "hasSeasonalClosure": false,
+                "hasCountryCross": true,
+                "roadGradeStrategy": [
+                    []
+                ],
+                "destIndex": 37,
+                "time": 186037,
+                "hasUnpaved": false,
+                "origNarrative": "Go west on E Colfax Ave/I-70 Bus W/US-40 W/US-287 N.",
+                "maneuvers": [
+                    {
+                        "distance": 0.135,
+                        "streets": [
+                            "E 14th Ave"
+                        ],
+                        "narrative": "Start out going east on E 14th Ave toward N Grant St.",
+                        "turnType": 0,
+                        "startPoint": {
+                            "lng": -104.984856,
+                            "lat": 39.738453
+                        },
+                        "index": 0,
+                        "formattedTime": "00:00:23",
+                        "directionName": "East",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=39.73845291137695,-104.98485565185547|marker-1||39.73845291137695,-104.9823226928711|marker-2||&center=39.73845291137695,-104.98358917236328&defaultMarker=none&zoom=13&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 23,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/icon-dirs-start_sm.gif",
+                        "direction": 8
+                    },
+                    {
+                        "distance": 0.11,
+                        "streets": [
+                            "N Logan St"
+                        ],
+                        "narrative": "Turn left onto N Logan St.",
+                        "turnType": 6,
+                        "startPoint": {
+                            "lng": -104.982323,
+                            "lat": 39.738453
+                        },
+                        "index": 1,
+                        "formattedTime": "00:00:21",
+                        "directionName": "North",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=39.73845291137695,-104.9823226928711|marker-2||39.740047454833984,-104.98233795166016|marker-3||&center=39.73925018310547,-104.98233032226562&defaultMarker=none&zoom=12&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 21,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_left_sm.gif",
+                        "direction": 1
+                    },
+                    {
+                        "distance": 1.482,
+                        "streets": [
+                            "E Colfax Ave",
+                            "I-70 Bus W",
+                            "US-40 W",
+                            "US-287 N"
+                        ],
+                        "narrative": "Turn left onto E Colfax Ave/I-70 Bus W/US-40 W/US-287 N.",
+                        "turnType": 6,
+                        "startPoint": {
+                            "lng": -104.982338,
+                            "lat": 39.740047
+                        },
+                        "index": 2,
+                        "formattedTime": "00:03:12",
+                        "directionName": "West",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "70",
+                                "type": 5,
+                                "url": "http://icons.mqcdn.com/icons/rs5.png?n=70&d=WEST",
+                                "direction": 7
+                            },
+                            {
+                                "extraText": "",
+                                "text": "40",
+                                "type": 2,
+                                "url": "http://icons.mqcdn.com/icons/rs2.png?n=40&d=WEST",
+                                "direction": 7
+                            },
+                            {
+                                "extraText": "",
+                                "text": "287",
+                                "type": 2,
+                                "url": "http://icons.mqcdn.com/icons/rs2.png?n=287&d=NORTH",
+                                "direction": 1
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=39.740047454833984,-104.98233795166016|marker-3||39.7403450012207,-105.00968170166016|marker-4||&center=39.740196228027344,-104.99600982666016&defaultMarker=none&zoom=10&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 1024,
+                        "time": 192,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_left_sm.gif",
+                        "direction": 7
+                    },
+                    {
+                        "distance": 0.101,
+                        "streets": [],
+                        "narrative": "Take the ramp toward I-25/Ft Collins/Colo Spgs.",
+                        "turnType": 12,
+                        "startPoint": {
+                            "lng": -105.009682,
+                            "lat": 39.740345
+                        },
+                        "index": 3,
+                        "formattedTime": "00:00:12",
+                        "directionName": "West",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=39.7403450012207,-105.00968170166016|marker-4||39.740570068359375,-105.01155853271484|marker-5||&center=39.74045753479004,-105.0106201171875&defaultMarker=none&zoom=14&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 1024,
+                        "time": 12,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_ramp_sm.gif",
+                        "direction": 7
+                    },
+                    {
+                        "distance": 388.965,
+                        "streets": [
+                            "I-25 N"
+                        ],
+                        "narrative": "Merge onto I-25 N toward Ft Collins (Crossing into Wyoming).",
+                        "turnType": 10,
+                        "startPoint": {
+                            "lng": -105.011559,
+                            "lat": 39.74057
+                        },
+                        "index": 4,
+                        "formattedTime": "05:06:03",
+                        "directionName": "North",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "25",
+                                "type": 1,
+                                "url": "http://icons.mqcdn.com/icons/rs1.png?n=25&d=NORTH",
+                                "direction": 1
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=39.740570068359375,-105.01155853271484|marker-5||44.36558151245117,-106.68911743164062|marker-6||&center=42.05307579040527,-105.85033798217773&defaultMarker=none&zoom=2&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 1152,
+                        "time": 18363,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_merge_right_sm.gif",
+                        "direction": 1
+                    },
+                    {
+                        "distance": 160.14,
+                        "streets": [
+                            "I-90 W"
+                        ],
+                        "narrative": "Merge onto I-90 W via the exit on the left toward Sheridan (Crossing into Montana).",
+                        "turnType": 11,
+                        "startPoint": {
+                            "lng": -106.689117,
+                            "lat": 44.365582
+                        },
+                        "index": 5,
+                        "formattedTime": "02:06:02",
+                        "directionName": "West",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "90",
+                                "type": 1,
+                                "url": "http://icons.mqcdn.com/icons/rs1.png?n=90&d=WEST",
+                                "direction": 7
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=44.36558151245117,-106.68911743164062|marker-6||45.79806137084961,-108.45304870605469|marker-7||&center=45.08182144165039,-107.57108306884766&defaultMarker=none&zoom=3&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 1152,
+                        "time": 7562,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_merge_left_sm.gif",
+                        "direction": 7
+                    },
+                    {
+                        "distance": 0.245,
+                        "streets": [],
+                        "narrative": "Take the US-87 N/I-90 Bus Loop exit, EXIT 452, toward Lockwood/Roundup.",
+                        "turnType": 14,
+                        "startPoint": {
+                            "lng": -108.453049,
+                            "lat": 45.798061
+                        },
+                        "index": 6,
+                        "formattedTime": "00:00:28",
+                        "directionName": "West",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "452",
+                                "type": 1001,
+                                "url": "http://icons.mqcdn.com/icons/rs1001.png?n=452&d=RIGHT",
+                                "direction": 0
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=45.79806137084961,-108.45304870605469|marker-7||45.79683303833008,-108.45779418945312|marker-8||&center=45.797447204589844,-108.4554214477539&defaultMarker=none&zoom=12&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 28,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_gr_exitright_sm.gif",
+                        "direction": 7
+                    },
+                    {
+                        "distance": 1.209,
+                        "streets": [
+                            "US Highway 87",
+                            "I-90 Bus W",
+                            "US-87 N"
+                        ],
+                        "narrative": "Turn right onto US Highway 87/I-90 Bus W/US-87 N.",
+                        "turnType": 2,
+                        "startPoint": {
+                            "lng": -108.457794,
+                            "lat": 45.796833
+                        },
+                        "index": 7,
+                        "formattedTime": "00:01:46",
+                        "directionName": "West",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "90",
+                                "type": 5,
+                                "url": "http://icons.mqcdn.com/icons/rs5.png?n=90&d=WEST",
+                                "direction": 7
+                            },
+                            {
+                                "extraText": "",
+                                "text": "87",
+                                "type": 2,
+                                "url": "http://icons.mqcdn.com/icons/rs2.png?n=87&d=NORTH",
+                                "direction": 1
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=45.79683303833008,-108.45779418945312|marker-8||45.794185638427734,-108.4813461303711|marker-9||&center=45.795509338378906,-108.46957015991211&defaultMarker=none&zoom=10&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 1024,
+                        "time": 106,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_right_sm.gif",
+                        "direction": 7
+                    },
+                    {
+                        "distance": 0.725,
+                        "streets": [
+                            "Main St",
+                            "US-87 N"
+                        ],
+                        "narrative": "Turn right onto Main St/US-87 N.",
+                        "turnType": 2,
+                        "startPoint": {
+                            "lng": -108.481346,
+                            "lat": 45.794186
+                        },
+                        "index": 8,
+                        "formattedTime": "00:01:24",
+                        "directionName": "North",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "87",
+                                "type": 2,
+                                "url": "http://icons.mqcdn.com/icons/rs2.png?n=87&d=NORTH",
+                                "direction": 1
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=45.794185638427734,-108.4813461303711|marker-9||45.80389404296875,-108.47727966308594|marker-10||&center=45.79903984069824,-108.47931289672852&defaultMarker=none&zoom=10&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 84,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_right_sm.gif",
+                        "direction": 1
+                    },
+                    {
+                        "distance": 2.851,
+                        "streets": [
+                            "E Airport Rd",
+                            "MT-318"
+                        ],
+                        "narrative": "Turn left onto E Airport Rd/MT-318.",
+                        "turnType": 6,
+                        "startPoint": {
+                            "lng": -108.47728,
+                            "lat": 45.803894
+                        },
+                        "index": 9,
+                        "formattedTime": "00:03:38",
+                        "directionName": "West",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "318",
+                                "type": 525,
+                                "url": "http://icons.mqcdn.com/icons/rs525.png?n=318",
+                                "direction": 0
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=45.80389404296875,-108.47727966308594|marker-10||45.80238342285156,-108.5351791381836|marker-11||&center=45.803138732910156,-108.50622940063477&defaultMarker=none&zoom=8&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 218,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_left_sm.gif",
+                        "direction": 7
+                    },
+                    {
+                        "distance": 3.148,
+                        "streets": [
+                            "MT Highway 3",
+                            "MT-3"
+                        ],
+                        "narrative": "Enter next roundabout and take the 2nd exit onto MT Highway 3/MT-3.",
+                        "turnType": 1,
+                        "startPoint": {
+                            "lng": -108.535179,
+                            "lat": 45.802383
+                        },
+                        "index": 10,
+                        "formattedTime": "00:04:01",
+                        "directionName": "West",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "3",
+                                "type": 525,
+                                "url": "http://icons.mqcdn.com/icons/rs525.png?n=3",
+                                "direction": 0
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=45.80238342285156,-108.5351791381836|marker-11||45.806522369384766,-108.59954071044922|marker-12||&center=45.804452896118164,-108.5673599243164&defaultMarker=none&zoom=8&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 241,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_slight_right_sm.gif",
+                        "direction": 7
+                    },
+                    {
+                        "distance": 40.425,
+                        "streets": [
+                            "MT-3"
+                        ],
+                        "narrative": "Enter next roundabout and take the 2nd exit onto MT-3.",
+                        "turnType": 0,
+                        "startPoint": {
+                            "lng": -108.599541,
+                            "lat": 45.806522
+                        },
+                        "index": 11,
+                        "formattedTime": "00:36:56",
+                        "directionName": "North",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "3",
+                                "type": 525,
+                                "url": "http://icons.mqcdn.com/icons/rs525.png?n=3",
+                                "direction": 0
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=45.806522369384766,-108.59954071044922|marker-12||46.3066291809082,-108.93803405761719|marker-13||&center=46.056575775146484,-108.7687873840332&defaultMarker=none&zoom=4&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 2216,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_straight_sm.gif",
+                        "direction": 1
+                    },
+                    {
+                        "distance": 44.998,
+                        "streets": [
+                            "US-12 W"
+                        ],
+                        "narrative": "Turn left onto US Highway 12/US-12 W. Continue to follow US-12 W.",
+                        "turnType": 6,
+                        "startPoint": {
+                            "lng": -108.938034,
+                            "lat": 46.306629
+                        },
+                        "index": 12,
+                        "formattedTime": "00:39:23",
+                        "directionName": "West",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "12",
+                                "type": 2,
+                                "url": "http://icons.mqcdn.com/icons/rs2.png?n=12&d=WEST",
+                                "direction": 7
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=46.3066291809082,-108.93803405761719|marker-13||46.43576431274414,-109.8118667602539|marker-14||&center=46.37119674682617,-109.37495040893555&defaultMarker=none&zoom=5&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 2363,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_left_sm.gif",
+                        "direction": 7
+                    },
+                    {
+                        "distance": 39.258,
+                        "streets": [
+                            "US-191 N"
+                        ],
+                        "narrative": "Turn right onto US Highway 191/US-191 N. Continue to follow US-191 N.",
+                        "turnType": 2,
+                        "startPoint": {
+                            "lng": -109.811867,
+                            "lat": 46.435764
+                        },
+                        "index": 13,
+                        "formattedTime": "00:34:51",
+                        "directionName": "North",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "191",
+                                "type": 2,
+                                "url": "http://icons.mqcdn.com/icons/rs2.png?n=191&d=NORTH",
+                                "direction": 1
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=46.43576431274414,-109.8118667602539|marker-14||46.9830207824707,-109.74528503417969|marker-15||&center=46.70939254760742,-109.7785758972168&defaultMarker=none&zoom=4&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 1024,
+                        "time": 2091,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_right_sm.gif",
+                        "direction": 1
+                    },
+                    {
+                        "distance": 90.001,
+                        "streets": [
+                            "MT-200 W"
+                        ],
+                        "narrative": "Take MT-200 W.",
+                        "turnType": 6,
+                        "startPoint": {
+                            "lng": -109.745285,
+                            "lat": 46.983021
+                        },
+                        "index": 14,
+                        "formattedTime": "01:23:26",
+                        "directionName": "West",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "200",
+                                "type": 525,
+                                "url": "http://icons.mqcdn.com/icons/rs525.png?n=200&d=WEST",
+                                "direction": 7
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=46.9830207824707,-109.74528503417969|marker-15||47.486270904541016,-111.34014892578125|marker-16||&center=47.23464584350586,-110.54271697998047&defaultMarker=none&zoom=4&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 1152,
+                        "time": 5006,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_left_sm.gif",
+                        "direction": 7
+                    },
+                    {
+                        "distance": 118.074,
+                        "streets": [
+                            "I-15 N"
+                        ],
+                        "narrative": "Merge onto I-15 N toward Shelby (Crossing into Alberta, Canada).",
+                        "turnType": 10,
+                        "startPoint": {
+                            "lng": -111.340149,
+                            "lat": 47.486271
+                        },
+                        "index": 15,
+                        "formattedTime": "01:35:47",
+                        "directionName": "North",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "15",
+                                "type": 1,
+                                "url": "http://icons.mqcdn.com/icons/rs1.png?n=15&d=NORTH",
+                                "direction": 1
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=47.486270904541016,-111.34014892578125|marker-16||48.99864196777344,-111.9600830078125|marker-17||&center=48.24245643615723,-111.65011596679688&defaultMarker=none&zoom=3&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 1216,
+                        "time": 5747,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_merge_right_sm.gif",
+                        "direction": 1
+                    },
+                    {
+                        "distance": 62.729,
+                        "streets": [
+                            "Red Coat Trail",
+                            "AB-4 N"
+                        ],
+                        "narrative": "I-15 N becomes Red Coat Trail/AB-4 N.",
+                        "turnType": 0,
+                        "startPoint": {
+                            "lng": -111.960083,
+                            "lat": 48.998642
+                        },
+                        "index": 16,
+                        "formattedTime": "00:57:48",
+                        "directionName": "Northwest",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "4",
+                                "type": 22,
+                                "url": "http://icons.mqcdn.com/icons/rs22.png?n=4&d=NORTH",
+                                "direction": 1
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=48.99864196777344,-111.9600830078125|marker-17||49.66889953613281,-112.79731750488281|marker-18||&center=49.333770751953125,-112.37870025634766&defaultMarker=none&zoom=4&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 128,
+                        "time": 3468,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_straight_sm.gif",
+                        "direction": 2
+                    },
+                    {
+                        "distance": 1.864,
+                        "streets": [
+                            "Mayor Magrath Dr",
+                            "Red Coat Trail",
+                            "AB-4"
+                        ],
+                        "narrative": "Turn right onto Mayor Magrath Dr/Red Coat Trail/AB-4.",
+                        "turnType": 2,
+                        "startPoint": {
+                            "lng": -112.797318,
+                            "lat": 49.6689
+                        },
+                        "index": 17,
+                        "formattedTime": "00:03:19",
+                        "directionName": "North",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "4",
+                                "type": 22,
+                                "url": "http://icons.mqcdn.com/icons/rs22.png?n=4",
+                                "direction": 0
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=49.66889953613281,-112.79731750488281|marker-18||49.694305419921875,-112.81050109863281|marker-19||&center=49.681602478027344,-112.80390930175781&defaultMarker=none&zoom=8&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 199,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_right_sm.gif",
+                        "direction": 1
+                    },
+                    {
+                        "distance": 30.315,
+                        "streets": [
+                            "AB-3 W"
+                        ],
+                        "narrative": "Merge onto AB-3 W toward Calgary/Ft Macleod.",
+                        "turnType": 10,
+                        "startPoint": {
+                            "lng": -112.810501,
+                            "lat": 49.694305
+                        },
+                        "index": 18,
+                        "formattedTime": "00:29:37",
+                        "directionName": "West",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "3",
+                                "type": 22,
+                                "url": "http://icons.mqcdn.com/icons/rs22.png?n=3&d=WEST",
+                                "direction": 7
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=49.694305419921875,-112.81050109863281|marker-19||49.71971893310547,-113.38334655761719|marker-20||&center=49.70701217651367,-113.096923828125&defaultMarker=none&zoom=5&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 1152,
+                        "time": 1777,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_merge_right_sm.gif",
+                        "direction": 7
+                    },
+                    {
+                        "distance": 2.908,
+                        "streets": [
+                            "AB-3",
+                            "AB-2"
+                        ],
+                        "narrative": "Turn right onto AB-3/AB-2.",
+                        "turnType": 2,
+                        "startPoint": {
+                            "lng": -113.383347,
+                            "lat": 49.719719
+                        },
+                        "index": 19,
+                        "formattedTime": "00:04:47",
+                        "directionName": "Southwest",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "3",
+                                "type": 22,
+                                "url": "http://icons.mqcdn.com/icons/rs22.png?n=3",
+                                "direction": 0
+                            },
+                            {
+                                "extraText": "",
+                                "text": "2",
+                                "type": 22,
+                                "url": "http://icons.mqcdn.com/icons/rs22.png?n=2",
+                                "direction": 0
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=49.71971893310547,-113.38334655761719|marker-20||49.71427536010742,-113.436767578125|marker-21||&center=49.716997146606445,-113.4100570678711&defaultMarker=none&zoom=9&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 287,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_right_sm.gif",
+                        "direction": 6
+                    },
+                    {
+                        "distance": 277.202,
+                        "streets": [
+                            "AB-2 N"
+                        ],
+                        "narrative": "Merge onto AB-2 N toward Calgary.",
+                        "turnType": 10,
+                        "startPoint": {
+                            "lng": -113.436768,
+                            "lat": 49.714275
+                        },
+                        "index": 20,
+                        "formattedTime": "04:13:25",
+                        "directionName": "North",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "2",
+                                "type": 22,
+                                "url": "http://icons.mqcdn.com/icons/rs22.png?n=2&d=NORTH",
+                                "direction": 1
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=49.71427536010742,-113.436767578125|marker-21||53.42588806152344,-113.49271392822266|marker-22||&center=51.57008171081543,-113.46474075317383&defaultMarker=none&zoom=2&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 1152,
+                        "time": 15205,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_merge_right_sm.gif",
+                        "direction": 1
+                    },
+                    {
+                        "distance": 15.252,
+                        "streets": [
+                            "Anthony Henday Dr",
+                            "AB-216 W"
+                        ],
+                        "narrative": "Merge onto Anthony Henday Dr/AB-216 W via the exit on the left toward West Edmonton Mall.",
+                        "turnType": 11,
+                        "startPoint": {
+                            "lng": -113.492714,
+                            "lat": 53.425888
+                        },
+                        "index": 21,
+                        "formattedTime": "00:15:32",
+                        "directionName": "North",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "216",
+                                "type": 22,
+                                "url": "http://icons.mqcdn.com/icons/rs22.png?n=216&d=WEST",
+                                "direction": 7
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=53.42588806152344,-113.49271392822266|marker-22||53.56587600708008,-113.66046142578125|marker-23||&center=53.49588203430176,-113.57658767700195&defaultMarker=none&zoom=6&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 1152,
+                        "time": 932,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_merge_left_sm.gif",
+                        "direction": 1
+                    },
+                    {
+                        "distance": 23.784,
+                        "streets": [
+                            "TC-16 W"
+                        ],
+                        "narrative": "Merge onto TC-16 W via EXIT 25 toward Jasper.",
+                        "turnType": 10,
+                        "startPoint": {
+                            "lng": -113.660461,
+                            "lat": 53.565876
+                        },
+                        "index": 22,
+                        "formattedTime": "00:22:03",
+                        "directionName": "West",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "16",
+                                "type": 20,
+                                "url": "http://icons.mqcdn.com/icons/rs20.png?n=16&d=WEST",
+                                "direction": 7
+                            },
+                            {
+                                "extraText": "",
+                                "text": "25",
+                                "type": 1001,
+                                "url": "http://icons.mqcdn.com/icons/rs1001.png?n=25&d=RIGHT",
+                                "direction": 0
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=53.56587600708008,-113.66046142578125|marker-23||53.570289611816406,-114.21443176269531|marker-24||&center=53.56808280944824,-113.93744659423828&defaultMarker=none&zoom=5&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 1152,
+                        "time": 1323,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_merge_right_sm.gif",
+                        "direction": 7
+                    },
+                    {
+                        "distance": 249.473,
+                        "streets": [
+                            "AB-43 N"
+                        ],
+                        "narrative": "Merge onto AB-43 N via EXIT 340 toward Grande Prairie/Whitecourt/Peace River.",
+                        "turnType": 10,
+                        "startPoint": {
+                            "lng": -114.214432,
+                            "lat": 53.57029
+                        },
+                        "index": 23,
+                        "formattedTime": "03:46:38",
+                        "directionName": "Northwest",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "43",
+                                "type": 22,
+                                "url": "http://icons.mqcdn.com/icons/rs22.png?n=43&d=NORTH",
+                                "direction": 1
+                            },
+                            {
+                                "extraText": "",
+                                "text": "340",
+                                "type": 1001,
+                                "url": "http://icons.mqcdn.com/icons/rs1001.png?n=340&d=RIGHT",
+                                "direction": 0
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=53.570289611816406,-114.21443176269531|marker-24||55.229087829589844,-118.79645538330078|marker-25||&center=54.399688720703125,-116.50544357299805&defaultMarker=none&zoom=3&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 1024,
+                        "time": 13598,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_merge_right_sm.gif",
+                        "direction": 2
+                    },
+                    {
+                        "distance": 7.993,
+                        "streets": [
+                            "Highway 43X",
+                            "AB-43X"
+                        ],
+                        "narrative": "AB-43 N becomes Highway 43X/AB-43X. Pass through 1 roundabout.",
+                        "turnType": 0,
+                        "startPoint": {
+                            "lng": -118.796455,
+                            "lat": 55.229088
+                        },
+                        "index": 24,
+                        "formattedTime": "00:09:59",
+                        "directionName": "Southwest",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "43X",
+                                "type": 22,
+                                "url": "http://icons.mqcdn.com/icons/rs22.png?n=43X",
+                                "direction": 0
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=55.229087829589844,-118.79645538330078|marker-25||55.1781005859375,-118.93811798095703|marker-26||&center=55.20359420776367,-118.8672866821289&defaultMarker=none&zoom=7&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 599,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_straight_sm.gif",
+                        "direction": 6
+                    },
+                    {
+                        "distance": 0.869,
+                        "streets": [
+                            "Highway 43X",
+                            "AB-43X"
+                        ],
+                        "narrative": "Keep right at the fork to continue on Highway 43X/AB-43X.",
+                        "turnType": 16,
+                        "startPoint": {
+                            "lng": -118.938118,
+                            "lat": 55.178101
+                        },
+                        "index": 25,
+                        "formattedTime": "00:00:47",
+                        "directionName": "Southwest",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "43X",
+                                "type": 22,
+                                "url": "http://icons.mqcdn.com/icons/rs22.png?n=43X",
+                                "direction": 0
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=55.1781005859375,-118.93811798095703|marker-26||55.170654296875,-118.9543685913086|marker-27||&center=55.17437744140625,-118.94624328613281&defaultMarker=none&zoom=10&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 47,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_fork_right2_sm.gif",
+                        "direction": 6
+                    },
+                    {
+                        "distance": 50.359,
+                        "streets": [
+                            "AB-43"
+                        ],
+                        "narrative": "Turn slight right onto Township Road 714/AB-43. Continue to follow AB-43 (Crossing into British Columbia).",
+                        "turnType": 1,
+                        "startPoint": {
+                            "lng": -118.954369,
+                            "lat": 55.170654
+                        },
+                        "index": 26,
+                        "formattedTime": "00:50:45",
+                        "directionName": "Northwest",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "43",
+                                "type": 22,
+                                "url": "http://icons.mqcdn.com/icons/rs22.png?n=43",
+                                "direction": 0
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=55.170654296875,-118.9543685913086|marker-27||55.480873107910156,-120.00140380859375|marker-28||&center=55.32576370239258,-119.47788619995117&defaultMarker=none&zoom=5&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 3045,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_slight_right_sm.gif",
+                        "direction": 2
+                    },
+                    {
+                        "distance": 18.244,
+                        "streets": [
+                            "BC-2"
+                        ],
+                        "narrative": "AB-43 becomes BC-2.",
+                        "turnType": 0,
+                        "startPoint": {
+                            "lng": -120.001404,
+                            "lat": 55.480873
+                        },
+                        "index": 27,
+                        "formattedTime": "00:19:02",
+                        "directionName": "North",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "2",
+                                "type": 22,
+                                "url": "http://icons.mqcdn.com/icons/rs22.png?n=2",
+                                "direction": 0
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=55.480873107910156,-120.00140380859375|marker-28||55.71591567993164,-120.1339340209961|marker-29||&center=55.5983943939209,-120.06766891479492&defaultMarker=none&zoom=5&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 1142,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_straight_sm.gif",
+                        "direction": 1
+                    },
+                    {
+                        "distance": 6.258,
+                        "streets": [
+                            "BC-2"
+                        ],
+                        "narrative": "Turn right onto 50th St/BC-2. Continue to follow BC-2.",
+                        "turnType": 2,
+                        "startPoint": {
+                            "lng": -120.133934,
+                            "lat": 55.715916
+                        },
+                        "index": 28,
+                        "formattedTime": "00:09:21",
+                        "directionName": "West",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "2",
+                                "type": 22,
+                                "url": "http://icons.mqcdn.com/icons/rs22.png?n=2",
+                                "direction": 0
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=55.71591567993164,-120.1339340209961|marker-29||55.758358001708984,-120.22441101074219|marker-30||&center=55.73713684082031,-120.17917251586914&defaultMarker=none&zoom=8&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 561,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_right_sm.gif",
+                        "direction": 7
+                    },
+                    {
+                        "distance": 1.712,
+                        "streets": [
+                            "Alaska Ave"
+                        ],
+                        "narrative": "Enter next roundabout and take the 3rd exit onto Alaska Ave.",
+                        "turnType": 2,
+                        "startPoint": {
+                            "lng": -120.224411,
+                            "lat": 55.758358
+                        },
+                        "index": 29,
+                        "formattedTime": "00:03:31",
+                        "directionName": "Northwest",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=55.758358001708984,-120.22441101074219|marker-30||55.771018981933594,-120.26054382324219|marker-31||&center=55.76468849182129,-120.24247741699219&defaultMarker=none&zoom=9&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 211,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_right_sm.gif",
+                        "direction": 2
+                    },
+                    {
+                        "distance": 555.031,
+                        "streets": [
+                            "BC-97"
+                        ],
+                        "narrative": "Alaska Ave becomes BC-97 (Crossing into Yukon).",
+                        "turnType": 0,
+                        "startPoint": {
+                            "lng": -120.260544,
+                            "lat": 55.771019
+                        },
+                        "index": 30,
+                        "formattedTime": "09:45:40",
+                        "directionName": "Northwest",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "97",
+                                "type": 22,
+                                "url": "http://icons.mqcdn.com/icons/rs22.png?n=97",
+                                "direction": 0
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=55.771018981933594,-120.26054382324219|marker-31||59.99982452392578,-127.66891479492188|marker-32||&center=57.88542175292969,-123.96472930908203&defaultMarker=none&zoom=2&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 1024,
+                        "time": 35140,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_straight_sm.gif",
+                        "direction": 2
+                    },
+                    {
+                        "distance": 290.514,
+                        "streets": [
+                            "Alaska Hwy"
+                        ],
+                        "narrative": "BC-97 becomes Alaska Hwy (Passing through British Columbia, Yukon, British Columbia, Yukon, British Columbia, Yukon and British Columbia, then crossing into Yukon).",
+                        "turnType": 0,
+                        "startPoint": {
+                            "lng": -127.668915,
+                            "lat": 59.999825
+                        },
+                        "index": 31,
+                        "formattedTime": "04:48:56",
+                        "directionName": "West",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=59.99982452392578,-127.66891479492188|marker-32||60.5612678527832,-134.4483184814453|marker-33||&center=60.28054618835449,-131.0586166381836&defaultMarker=none&zoom=2&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 1024,
+                        "time": 17336,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_straight_sm.gif",
+                        "direction": 7
+                    },
+                    {
+                        "distance": 123.108,
+                        "streets": [
+                            "YT-1"
+                        ],
+                        "narrative": "Stay straight to go onto Alaska Hwy/YT-1. Continue to follow YT-1.",
+                        "turnType": 0,
+                        "startPoint": {
+                            "lng": -134.448318,
+                            "lat": 60.561268
+                        },
+                        "index": 32,
+                        "formattedTime": "02:15:20",
+                        "directionName": "West",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "1",
+                                "type": 22,
+                                "url": "http://icons.mqcdn.com/icons/rs22.png?n=1",
+                                "direction": 0
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=60.5612678527832,-134.4483184814453|marker-33||60.752506256103516,-137.51002502441406|marker-34||&center=60.65688705444336,-135.9791717529297&defaultMarker=none&zoom=3&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 1024,
+                        "time": 8120,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_straight_sm.gif",
+                        "direction": 7
+                    },
+                    {
+                        "distance": 291.163,
+                        "streets": [
+                            "Alaska Hwy"
+                        ],
+                        "narrative": "Turn right onto Alaska Hwy/YT-1. Continue to follow Alaska Hwy (Crossing into Alaska, United States).",
+                        "turnType": 2,
+                        "startPoint": {
+                            "lng": -137.510025,
+                            "lat": 60.752506
+                        },
+                        "index": 33,
+                        "formattedTime": "05:12:14",
+                        "directionName": "Northwest",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=60.752506256103516,-137.51002502441406|marker-34||63.33595657348633,-142.9877166748047|marker-35||&center=62.04423141479492,-140.24887084960938&defaultMarker=none&zoom=2&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 1088,
+                        "time": 18734,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_right_sm.gif",
+                        "direction": 2
+                    },
+                    {
+                        "distance": 122.458,
+                        "streets": [
+                            "AK-1"
+                        ],
+                        "narrative": "Turn left onto Glenn Highway Tok Cutoff/AK-1. Continue to follow AK-1.",
+                        "turnType": 6,
+                        "startPoint": {
+                            "lng": -142.987717,
+                            "lat": 63.335957
+                        },
+                        "index": 34,
+                        "formattedTime": "02:14:56",
+                        "directionName": "Southwest",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "1",
+                                "type": 501,
+                                "url": "http://icons.mqcdn.com/icons/rs501.png?n=1",
+                                "direction": 0
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=63.33595657348633,-142.9877166748047|marker-35||62.28911590576172,-145.3530731201172|marker-36||&center=62.81253623962402,-144.17039489746094&defaultMarker=none&zoom=3&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 8096,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_left_sm.gif",
+                        "direction": 6
+                    },
+                    {
+                        "distance": 13.929,
+                        "streets": [
+                            "Richardson Highway",
+                            "Richardson Hwy",
+                            "AK-4",
+                            "AK-1"
+                        ],
+                        "narrative": "Turn left onto Richardson Highway/Richardson Hwy/AK-4/AK-1.",
+                        "turnType": 6,
+                        "startPoint": {
+                            "lng": -145.353073,
+                            "lat": 62.289116
+                        },
+                        "index": 35,
+                        "formattedTime": "00:13:06",
+                        "directionName": "South",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "4",
+                                "type": 501,
+                                "url": "http://icons.mqcdn.com/icons/rs501.png?n=4",
+                                "direction": 0
+                            },
+                            {
+                                "extraText": "",
+                                "text": "1",
+                                "type": 501,
+                                "url": "http://icons.mqcdn.com/icons/rs501.png?n=1",
+                                "direction": 0
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=62.28911590576172,-145.3530731201172|marker-36||62.109012603759766,-145.47604370117188|marker-37||&center=62.19906425476074,-145.41455841064453&defaultMarker=none&zoom=6&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 786,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_left_sm.gif",
+                        "direction": 4
+                    },
+                    {
+                        "distance": 181.508,
+                        "streets": [
+                            "AK-1 S"
+                        ],
+                        "narrative": "Turn slight right onto Glenn Hwy/AK-1. Continue to follow AK-1 S.",
+                        "turnType": 1,
+                        "startPoint": {
+                            "lng": -145.476044,
+                            "lat": 62.109013
+                        },
+                        "index": 36,
+                        "formattedTime": "03:03:09",
+                        "directionName": "South",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [
+                            {
+                                "extraText": "",
+                                "text": "1",
+                                "type": 501,
+                                "url": "http://icons.mqcdn.com/icons/rs501.png?n=1&d=SOUTH",
+                                "direction": 4
+                            }
+                        ],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=62.109012603759766,-145.47604370117188|marker-37||61.21756362915039,-149.8710174560547|marker-38||&center=61.66328811645508,-147.67353057861328&defaultMarker=none&zoom=3&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 1152,
+                        "time": 10989,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_slight_right_sm.gif",
+                        "direction": 4
+                    },
+                    {
+                        "distance": 1.092,
+                        "streets": [
+                            "E 5th Ave"
+                        ],
+                        "narrative": "Stay straight to go onto E 5th Ave.",
+                        "turnType": 0,
+                        "startPoint": {
+                            "lng": -149.871017,
+                            "lat": 61.217564
+                        },
+                        "index": 37,
+                        "formattedTime": "00:02:22",
+                        "directionName": "West",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=61.21756362915039,-149.8710174560547|marker-38||61.21757507324219,-149.90371704101562|marker-39||&center=61.21756935119629,-149.88736724853516&defaultMarker=none&zoom=9&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 142,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_straight_sm.gif",
+                        "direction": 7
+                    },
+                    {
+                        "distance": 0.069,
+                        "streets": [
+                            "L St"
+                        ],
+                        "narrative": "Turn left onto L St.",
+                        "turnType": 6,
+                        "startPoint": {
+                            "lng": -149.903717,
+                            "lat": 61.217575
+                        },
+                        "index": 38,
+                        "formattedTime": "00:00:10",
+                        "directionName": "South",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=61.21757507324219,-149.90371704101562|marker-39||61.216583251953125,-149.90374755859375|marker-40||&center=61.217079162597656,-149.9037322998047&defaultMarker=none&zoom=13&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 10,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_left_sm.gif",
+                        "direction": 4
+                    },
+                    {
+                        "distance": 0.139,
+                        "streets": [
+                            "W 6th Ave"
+                        ],
+                        "narrative": "Turn left onto W 6th Ave.",
+                        "turnType": 6,
+                        "startPoint": {
+                            "lng": -149.903748,
+                            "lat": 61.216583
+                        },
+                        "index": 39,
+                        "formattedTime": "00:00:17",
+                        "directionName": "East",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "mapUrl": "http://www.mapquestapi.com/staticmap/v5/map?key=hz95lGLUIJZG938GwcXLQedCd5UuP8l5&size=225,160&locations=61.216583251953125,-149.90374755859375|marker-40||61.216583251953125,-149.89959716796875|marker-41||&center=61.216583251953125,-149.90167236328125&defaultMarker=none&zoom=12&rand=-48825288&session=6111c226-0272-5f21-02b4-333a-0a0e8f71c919",
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 17,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/rs_left_sm.gif",
+                        "direction": 8
+                    },
+                    {
+                        "distance": 0,
+                        "streets": [],
+                        "narrative": "Welcome to ANCHORAGE, AK.",
+                        "turnType": -1,
+                        "startPoint": {
+                            "lng": -149.899597,
+                            "lat": 61.216583
+                        },
+                        "index": 40,
+                        "formattedTime": "00:00:00",
+                        "directionName": "",
+                        "maneuverNotes": [],
+                        "linkIds": [],
+                        "signs": [],
+                        "transportMode": "AUTO",
+                        "attributes": 0,
+                        "time": 0,
+                        "iconUrl": "http://content.mqcdn.com/mqsite/turnsigns/icon-dirs-end_sm.gif",
+                        "direction": 0
+                    }
+                ],
+                "hasFerry": false
+            }
+        ],
+        "options": {
+            "arteryWeights": [],
+            "cyclingRoadFactor": 1,
+            "timeType": 0,
+            "useTraffic": false,
+            "returnLinkDirections": false,
+            "countryBoundaryDisplay": true,
+            "enhancedNarrative": false,
+            "locale": "en_US",
+            "tryAvoidLinkIds": [],
+            "drivingStyle": 2,
+            "doReverseGeocode": true,
+            "generalize": -1,
+            "mustAvoidLinkIds": [],
+            "sideOfStreetDisplay": true,
+            "routeType": "FASTEST",
+            "avoidTimedConditions": false,
+            "routeNumber": 0,
+            "shapeFormat": "raw",
+            "maxWalkingDistance": -1,
+            "destinationManeuverDisplay": true,
+            "transferPenalty": -1,
+            "narrativeType": "text",
+            "walkingSpeed": -1,
+            "urbanAvoidFactor": -1,
+            "stateBoundaryDisplay": true,
+            "unit": "M",
+            "highwayEfficiency": 22,
+            "maxLinkId": 0,
+            "maneuverPenalty": -1,
+            "avoidTripIds": [],
+            "filterZoneFactor": -1,
+            "manmaps": "true"
+        },
+        "locations": [
+            {
+                "dragPoint": false,
+                "displayLatLng": {
+                    "lng": -104.984856,
+                    "lat": 39.738453
+                },
+                "adminArea4": "Denver County",
+                "adminArea5": "Denver",
+                "postalCode": "",
+                "adminArea1": "US",
+                "adminArea3": "CO",
+                "type": "s",
+                "sideOfStreet": "N",
+                "geocodeQualityCode": "A5XAX",
+                "adminArea4Type": "County",
+                "linkId": 40287819,
+                "street": "",
+                "adminArea5Type": "City",
+                "geocodeQuality": "CITY",
+                "adminArea1Type": "Country",
+                "adminArea3Type": "State",
+                "latLng": {
+                    "lng": -104.984853,
+                    "lat": 39.738453
+                }
+            },
+            {
+                "dragPoint": false,
+                "displayLatLng": {
+                    "lng": -149.899597,
+                    "lat": 61.216583
+                },
+                "adminArea4": "Municipality of Anchorage",
+                "adminArea5": "Anchorage",
+                "postalCode": "",
+                "adminArea1": "US",
+                "adminArea3": "AK",
+                "type": "s",
+                "sideOfStreet": "N",
+                "geocodeQualityCode": "A5XAX",
+                "adminArea4Type": "County",
+                "linkId": 70476260,
+                "street": "",
+                "adminArea5Type": "City",
+                "geocodeQuality": "CITY",
+                "adminArea1Type": "Country",
+                "adminArea3Type": "State",
+                "latLng": {
+                    "lng": -149.899597,
+                    "lat": 61.216583
+                }
+            }
+        ],
+        "time": 186037,
+        "hasUnpaved": false,
+        "locationSequence": [
+            0,
+            1
+        ],
+        "hasFerry": false
+    },
+    "info": {
+        "statuscode": 0,
+        "copyright": {
+            "imageAltText": "© 2021 MapQuest, Inc.",
+            "imageUrl": "http://api.mqcdn.com/res/mqlogo.gif",
+            "text": "© 2021 MapQuest, Inc."
+        },
+        "messages": []
+    }
+}

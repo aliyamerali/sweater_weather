@@ -28,7 +28,7 @@ RSpec.describe 'Route API Service' do
     it 'returns route data from a start/end point' do
       response = RouteService.get_route(@starting, @ending)
 
-      expect(response[:route][:time]).to eq(2389)
+      expect(response[:route][:time]).to eq(9556)
       expect(response[:info][:messages].length).to eq(0)
     end
 

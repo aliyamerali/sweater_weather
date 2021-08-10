@@ -54,7 +54,6 @@ RSpec.describe 'Road Trip details endpoint' do
     weather_at_destination_long = File.read('spec/fixtures/weather_at_destination_long.json')
     stub_request(:get, "https://api.openweathermap.org/data/2.5/onecall?lat=#{lat}&lon=#{long}&exclude=minutely,alerts&appid=#{ENV['WEATHER_API_KEY']}&units=imperial")
       .to_return(status: 200, body: weather_at_destination_long, headers: {})
-
   end
 
   it 'if API key is valid, returns travel time and weather at ETA - short trip' do
@@ -93,6 +92,23 @@ RSpec.describe 'Road Trip details endpoint' do
     expect(output[:data][:attributes][:weather_at_eta][:conditions]).to eq("light rain")
   end
 
+  it 'if no route is possible, returns impossible travel time and no weather' do
+    request_body = {
+                    origin: @starting,
+                    destination: @incalculable_destination,
+                    api_key: @user.api_key
+                    }
+    post '/api/v1/road_trip', params: request_body, as: :json
+
+    output = JSON.parse(response.body, symbolize_names: true)
+
+    expect(output[:data][:type]).to eq("roadtrip")
+    expect(output[:data][:attributes][:start_city]).to eq(@starting)
+    expect(output[:data][:attributes][:end_city]).to eq(@incalculable_destination)
+    expect(output[:data][:attributes][:travel_time]).to eq('impossible')
+    expect(output[:data][:attributes][:weather_at_eta]).to eq({})
+  end
+
   it 'if API key is invalid, returns 401 unauthorized' do
     request_body = {
                     origin: @starting,
@@ -118,23 +134,8 @@ RSpec.describe 'Road Trip details endpoint' do
     expect(output[:errors].first[:title]).to eq('Invalid Credentials')
   end
 
-  it 'if no route is possible, returns impossible travel time and no weather'
-
   it 'if origin or destination is missing, returns 400 bad request' do
     request_body = {
-                    destination: @ending,
-                    api_key: @user.api_key
-                    }
-    post '/api/v1/road_trip', params: request_body, as: :json
-
-    output = JSON.parse(response.body, symbolize_names: true)
-    expect(response.status).to eq(400)
-    expect(output[:errors].first[:title]).to eq('Invalid Request')
-  end
-
-  it 'if origin or destination is invalid, returns 400 bad request' do
-    request_body = {
-                    origin: '23a0',
                     destination: @ending,
                     api_key: @user.api_key
                     }

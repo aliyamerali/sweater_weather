@@ -8,10 +8,14 @@ class RoadtripSerializer
           start_city: roadtrip.origin,
           end_city: roadtrip.destination,
           travel_time: roadtrip.duration,
-          weather_at_eta: {
-            temperature: destination_forecast.temperature,
-            conditions: destination_forecast.conditions
-          }
+          weather_at_eta: if destination_forecast.nil?
+                            {}
+                          else
+                            {
+                              temperature: destination_forecast.temperature,
+                              conditions: destination_forecast.conditions
+                            }
+                          end
         }
       }
     }

@@ -8,6 +8,10 @@ class Roadtrip
   end
 
   def format_duration(duration)
-    "#{duration[:hours]} hours, #{duration[:minutes]} minutes"
+    if duration.is_a?(Hash)
+      "#{duration[:hours]} hours, #{duration[:minutes]} minutes"
+    else
+      duration
+    end
   end
 end

@@ -59,9 +59,9 @@ RSpec.describe 'Road Trip details endpoint' do
 
   it 'if API key is valid, returns travel time and weather at ETA - short trip' do
     request_body = {
-                    'origin': @starting,
-                    'destination': @ending,
-                    'api_key': @user.api_key
+                    origin: @starting,
+                    destination: @ending,
+                    api_key: @user.api_key
                     }
     post '/api/v1/road_trip', params: request_body, as: :json
 
@@ -77,9 +77,9 @@ RSpec.describe 'Road Trip details endpoint' do
 
   it 'if API key is valid, returns travel time and weather at ETA - long trip' do
     request_body = {
-                    'origin': @starting,
-                    'destination': @long_ending,
-                    'api_key': @user.api_key
+                    origin: @starting,
+                    destination: @long_ending,
+                    api_key: @user.api_key
                     }
     post '/api/v1/road_trip', params: request_body, as: :json
 
@@ -95,28 +95,53 @@ RSpec.describe 'Road Trip details endpoint' do
 
   it 'if API key is invalid, returns 401 unauthorized' do
     request_body = {
-                    'origin': @starting,
-                    'destination': @ending,
-                    'api_key': '123445676789'
+                    origin: @starting,
+                    destination: @ending,
+                    api_key: '123445676789'
                     }
     post '/api/v1/road_trip', params: request_body, as: :json
 
     output = JSON.parse(response.body, symbolize_names: true)
+    expect(response.status).to eq(401)
     expect(output[:errors].first[:title]).to eq('Invalid Credentials')
   end
 
   it 'if API key is missing, returns 401 unauthorized' do
     request_body = {
-                    'origin': @starting,
-                    'destination': @ending
+                    origin: @starting,
+                    destination: @ending
                     }
     post '/api/v1/road_trip', params: request_body, as: :json
 
     output = JSON.parse(response.body, symbolize_names: true)
+    expect(response.status).to eq(401)
     expect(output[:errors].first[:title]).to eq('Invalid Credentials')
   end
 
   it 'if no route is possible, returns impossible travel time and no weather'
-  it 'if origin or destination is missing, returns 400 bad request'
-  it 'if origin or destination is invalid, returns 400 bad request'
+
+  it 'if origin or destination is missing, returns 400 bad request' do
+    request_body = {
+                    destination: @ending,
+                    api_key: @user.api_key
+                    }
+    post '/api/v1/road_trip', params: request_body, as: :json
+
+    output = JSON.parse(response.body, symbolize_names: true)
+    expect(response.status).to eq(400)
+    expect(output[:errors].first[:title]).to eq('Invalid Request')
+  end
+
+  it 'if origin or destination is invalid, returns 400 bad request' do
+    request_body = {
+                    origin: '23a0',
+                    destination: @ending,
+                    api_key: @user.api_key
+                    }
+    post '/api/v1/road_trip', params: request_body, as: :json
+
+    output = JSON.parse(response.body, symbolize_names: true)
+    expect(response.status).to eq(400)
+    expect(output[:errors].first[:title]).to eq('Invalid Request')
+  end
 end

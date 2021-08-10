@@ -98,10 +98,10 @@ RSpec.describe 'Weather endpoint returns forecast for a given city' do
 
     expect(output[:attributes][:current_weather][:temperature]).to eq(33.96)
 
-    expect(output[:attributes][:daily_weather].first[:max_temp]).to eq(34.11)
-    expect(output[:attributes][:daily_weather].first[:min_temp]).to eq(21.95)
+    expect(output[:attributes][:daily_weather].first[:max_temp]).to eq(36.06)
+    expect(output[:attributes][:daily_weather].first[:min_temp]).to eq(22.27)
 
-    expect(output[:attributes][:hourly_weather].first[:temperature]).to eq(33.86)
+    expect(output[:attributes][:hourly_weather].first[:temperature]).to eq(33.96)
 
     expect(output[:attributes].keys.include?(:minutely_weather)).to eq(false)
     expect(output[:attributes].keys.include?(:alerts)).to eq(false)

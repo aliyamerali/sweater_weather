@@ -1,7 +1,7 @@
 class ImageFacade
   def self.get_image(location)
     weather = ForecastFacade.get_forecast(location)
-    if weather.class == Error
+    if weather.instance_of?(Error)
       weather
     else
       weather_conditions = weather.current_weather[:conditions]

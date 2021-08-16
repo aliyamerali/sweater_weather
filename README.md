@@ -1,4 +1,8 @@
 # Sweater Weather
+<a href="https://img.shields.io/badge/coverage-99.87%25-green">
+        <img src="https://img.shields.io/badge/coverage-99.87%25-green"
+            alt="coverage"></a>
+
 
 ## Project Description 
 Sweater Weather is a back-end Rails application that exposes a set of endpoints to support an app used for planning roadtrips in a service-oriented architecture. Endpoints expose weather forecast data, roadtrip routes and future forecasts at destinations, and images for location and time specific weather forecasts. It also supports user registration, login, and the assignment and validation of API keys.

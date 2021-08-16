@@ -19,3 +19,17 @@ Contributor:
 | `POST /api/v1/users` | `{ "email": "whatever@test.com", "password": "password", "password_confirmation": "password" }` | Creates a new user and returns an API key with successful user creation.  |
 | `POST /api/v1/sessions` | `{ "email": "whatever@test.com", "password": "password" }` | Returns email and API key for existing user if credentials authenticate.  |
 | `POST /api/v1/road_trip` + optional param for units (imperial or metric)| `{ "origin": "Sample,CO", "destination": "Sample,NY", "api_key": "apikey" }` | Returns roadtrip travel time and weather forecast of destination at ETA. Units default to imperial unless otherwise specified. |
+
+## Setup
+To setup these endpoints locally: 
+1. clone this repo to your local machine
+2. run `bundle install`
+3. install [Figaro](https://github.com/laserlemon/figaro) by running `bundle exec figaro install`
+4. add API keys to the `config/.application.yml` for the [Mapquest](https://developer.mapquest.com/documentation/), [OpenWeather](https://openweathermap.org/api/one-call-api), and [Unsplash](https://unsplash.com/documentation) APIs: 
+   ```
+   MAPQUEST_API_KEY: <your API key>
+   WEATHER_API_KEY: <your API key>
+   UNSPLASH_API_KEY: <your API key>
+   ```
+5. run `rails db:{create,migrate}` to setup the database
+6. run `rails s` and navigate to http://localhost:3000

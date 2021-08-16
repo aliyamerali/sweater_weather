@@ -32,4 +32,4 @@ To setup these endpoints locally:
    UNSPLASH_API_KEY: <your API key>
    ```
 5. run `rails db:{create,migrate}` to setup the database
-6. run `rails s` and navigate to http://localhost:3000
+6. run `rails s` and navigate to http://localhost:3000 with the desired endpoint for `get` requests, and/or use a tool like [Postman](https://www.postman.com) for `post` requests. 

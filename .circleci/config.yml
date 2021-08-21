@@ -33,6 +33,7 @@ jobs:
         #   username: mydockerhub-user
         #   password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
         environment: # add POSTGRES environment variables.
+          TZ: "America/Denver"
           POSTGRES_USER: sweather_weather
           POSTGRES_DB: sweater_weather_test
           POSTGRES_PASSWORD: password

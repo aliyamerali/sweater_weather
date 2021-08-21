@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Forecast PORO' do
   before :each do
-    sample_data = File.read('./spec/fixtures/weather_successful.json')
+    sample_data = File.read('spec/fixtures/weather_successful.json')
     data = JSON.parse(sample_data, symbolize_names: true)
 
     @forecast = Forecast.new(data)

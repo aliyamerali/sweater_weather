@@ -1,0 +1,16 @@
+current directory: /Users/aliyamerali/Turing/3Mod/projects/sweater_weather/vendor/bundle/ruby/2.7.0/gems/racc-1.5.2/ext/racc/cparse
+/Users/aliyamerali/.rbenv/versions/2.7.2/bin/ruby -I /Users/aliyamerali/.rbenv/versions/2.7.2/lib/ruby/2.7.0 -r ./siteconf20210821-2457-1cbn5pn.rb extconf.rb
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /Users/aliyamerali/Turing/3Mod/projects/sweater_weather/vendor/bundle/ruby/2.7.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR=" clean
+
+current directory: /Users/aliyamerali/Turing/3Mod/projects/sweater_weather/vendor/bundle/ruby/2.7.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR="
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/aliyamerali/Turing/3Mod/projects/sweater_weather/vendor/bundle/ruby/2.7.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20210821-2457-qr64cc/racc

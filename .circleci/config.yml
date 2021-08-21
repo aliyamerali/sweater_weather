@@ -35,14 +35,14 @@ jobs:
         environment: # add POSTGRES environment variables.
           POSTGRES_USER: sweather_weather
           POSTGRES_DB: sweater_weather_test
-          POSTGRES_PASSWORD: ""
+          POSTGRES_PASSWORD: password
     # environment variables specific to Ruby/Rails, applied to the primary container.
     environment:
       BUNDLE_JOBS: "3"
       BUNDLE_RETRY: "3"
       PGHOST: 127.0.0.1
       PGUSER: sweather_weather
-      PGPASSWORD: ""
+      PGPASSWORD: password
       RAILS_ENV: test
     # A series of steps to run, some are similar to those in "build".
     steps:

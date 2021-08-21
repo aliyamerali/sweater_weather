@@ -27,3 +27,7 @@
 
 # Ignore application configuration
 /config/application.yml
+
+# Ignore env files for CI setup
+/.env.app.testing
+/.env.db.testing

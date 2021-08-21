@@ -1,7 +1,7 @@
 # Sweater Weather
-<a href="https://img.shields.io/badge/coverage-99.87%25-green">
-        <img src="https://img.shields.io/badge/coverage-99.87%25-green"
-            alt="coverage"></a>
+[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=shield)](https://circleci.com/gh/circleci/circleci-docs)
+[![RSpec](https://img.shields.io/badge/coverage-99.87%25-brightgreen)](https://img.shields.io/badge/coverage-99.87%25-brightgreen)
+
 
 
 ## Project Description 

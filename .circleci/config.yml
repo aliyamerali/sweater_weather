@@ -9,7 +9,6 @@ jobs:
   build: # our first job, named "build"
     docker:
       - image: circleci/ruby:2.7.2
-      # - image: cimg/ruby:2.7-browsers-legacy # use a tailored CircleCI docker image.
         # auth:
         #   username: mydockerhub-user
         #   password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
@@ -39,6 +38,7 @@ jobs:
           POSTGRES_PASSWORD: password
     # environment variables specific to Ruby/Rails, applied to the primary container.
     environment:
+      TZ: "America/Denver"
       BUNDLE_JOBS: "3"
       BUNDLE_RETRY: "3"
       PGHOST: 127.0.0.1

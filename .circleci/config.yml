@@ -28,7 +28,7 @@ jobs:
         # auth:
         #   username: mydockerhub-user
         #   password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-      - image: circleci/postgres:13.4-alpine
+      - image: cimg/postgres:13.3
         # auth:
         #   username: mydockerhub-user
         #   password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
